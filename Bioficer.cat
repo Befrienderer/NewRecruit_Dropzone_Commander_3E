@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="false" id="341c-a9a0-8949-4c61" name="Bioficer" gameSystemId="sys-1822-fb7b-9057-840f" gameSystemRevision="1" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <sharedSelectionEntries>
+    <selectionEntry type="unit" import="true" name="Drones" hidden="false" id="ccbb-8f16-10ca-ae23">
+      <infoLinks>
+        <infoLink name="Drone" id="b880-36dd-54a8-7a1a" hidden="false" type="profile" targetId="2f46-1b95-5a8a-eff1"/>
+      </infoLinks>
+      <costs>
+        <cost name="points" typeId="ab87-75c9-cd43-9593" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Drones" hidden="false" id="2e66-2993-ca91-be65">
+          <costs>
+            <cost name="points" typeId="ab87-75c9-cd43-9593" value="20"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Decon Rifles" id="365e-7c70-eb25-c5b0" hidden="false" type="profile" targetId="112d-3627-e6de-45d3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="always" value="1" field="selections" scope="parent" childId="any" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink targetId="de22-82b2-a95d-a9b0" id="d9bd-3716-3c45-124d" primary="true" name="Generated"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="de22-82b2-a95d-a9b0" id="ab59-59a8-cf62-cfcb" primary="true" name="Generated"/>
+      </categoryLinks>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedProfiles>
+    <profile name="Drone" typeId="60cc-a4a2-7032-d1fe" typeName="Infantry" hidden="false" id="2f46-1b95-5a8a-eff1">
+      <characteristics>
+        <characteristic name="Type" typeId="9d00-f2ed-8a19-e7d9">Infantry</characteristic>
+        <characteristic name="Mv" typeId="9167-1a57-de9c-b897">2&quot;</characteristic>
+        <characteristic name="OF" typeId="cfcb-c9c3-d604-09b6">4</characteristic>
+        <characteristic name="DF" typeId="57d7-2739-2815-df4f">4+</characteristic>
+        <characteristic name="B" typeId="29ac-a8a4-cec6-ad41">A</characteristic>
+        <characteristic name="DP" typeId="e517-cfd1-1a03-e2b4">5</characteristic>
+        <characteristic name="Special" typeId="a246-5778-fd67-7be8">Puppet</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Decon Rifles" typeId="7156-7401-8748-a010" typeName="Weapons" hidden="false" id="112d-3627-e6de-45d3">
+      <characteristics>
+        <characteristic name="Name" typeId="5c93-0ac9-b337-a46f">Decon Rifles</characteristic>
+        <characteristic name="Arc" typeId="38a0-14d6-0b55-92a5">F/S/R</characteristic>
+        <characteristic name="MA" typeId="2695-9f7f-7f24-23d4">Full</characteristic>
+        <characteristic name="R" typeId="a82b-805b-19a7-b5ea">18&quot;</characteristic>
+        <characteristic name="Att" typeId="a231-54d0-24e7-04be">5</characteristic>
+        <characteristic name="Ac" typeId="5bc5-dbfb-01f2-69fc">3+</characteristic>
+        <characteristic name="E" typeId="50b3-289f-aebe-737d">S1</characteristic>
+        <characteristic name="Special" typeId="e69e-e7a9-4626-4c80">Decon</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+  <categoryEntries>
+    <categoryEntry name="Generated" id="de22-82b2-a95d-a9b0" hidden="false"/>
+  </categoryEntries>
+  <entryLinks>
+    <entryLink import="true" name="Drones" hidden="false" id="18b4-b80a-eecc-e70f" targetId="ccbb-8f16-10ca-ae23" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="de22-82b2-a95d-a9b0" id="bcc4-15bb-5528-fb50" primary="true" name="Generated"/>
+      </categoryLinks>
+    </entryLink>
+  </entryLinks>
+</catalogue>
