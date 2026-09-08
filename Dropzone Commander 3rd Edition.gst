@@ -7,30 +7,26 @@
     <categoryEntry name="Heavy" id="9ed0-b443-0fe4-1eaa" hidden="false"/>
     <categoryEntry name="Transport" id="0f65-b14b-ed9f-3e06" hidden="false"/>
     <categoryEntry name="Generated" id="9ca1-02c4-a934-51fe" hidden="false"/>
+    <categoryEntry name="Raw Materials" id="2b55-17b3-4772-a8d4" hidden="false"/>
   </categoryEntries>
   <costTypes>
-    <costType name="Vanguard" id="ab87-75c9-cd43-9593" defaultCostLimit="-1"/>
-    <costType name="Standard" id="6086-6c29-a320-0fcc" defaultCostLimit="-1"/>
-    <costType name="Support" id="df03-77d8-4c11-2243" defaultCostLimit="-1"/>
-    <costType name="Heavy" id="72f6-b4d6-1f34-219e" defaultCostLimit="-1"/>
-    <costType name="Transport" id="4306-5775-b4a6-007d" defaultCostLimit="-1"/>
     <costType name="pts" id="cdb2-e720-ea26-2255" defaultCostLimit="-1"/>
+    <costType name="category" id="e154-4f91-e9d9-012e" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
   <forceEntries>
     <forceEntry name="Configuration" id="c15e-98a2-f3dd-1cb4" childForcesLabel="Battlegroups" hidden="false" page="9" publicationId="170a-7ed5-c49d-82ec">
       <constraints>
         <constraint id="9ca0-6032-9c53-cca7-min" field="forces" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="1"/>
         <constraint id="9ca0-6032-9c53-cca7-max" field="forces" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="dzc-alloc-vanguard" childId="74de-7c05-a61e-25e8" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
+        <constraint id="dzc-alloc-heavy" childId="9ed0-b443-0fe4-1eaa" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
+        <constraint id="dzc-alloc-support" childId="d6a2-4ad7-4694-03ce" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
       </constraints>
       <forceEntries>
-        <forceEntry name="Battlegroup" id="5a24-6c02-1bfc-6fd8" hidden="false">
+        <forceEntry name="Group" id="5a24-6c02-1bfc-6fd8" hidden="false">
           <categoryLinks>
             <categoryLink name="Standard" id="74f7-2c1e-4140-39ee" hidden="false" targetId="c926-5116-6500-dd46"/>
-            <categoryLink name="Support" id="d404-33bb-8a7c-74c0" hidden="false" targetId="d6a2-4ad7-4694-03ce">
-              <constraints>
-                <constraint id="fd30-7751-55d6-8d56" field="limit::6086-6c29-a320-0fcc" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="force" shared="false" type="max" value="100"/>
-              </constraints>
-            </categoryLink>
+            <categoryLink name="Support" id="d404-33bb-8a7c-74c0" hidden="false" targetId="d6a2-4ad7-4694-03ce"/>
             <categoryLink name="Heavy" id="9033-d7b5-fa7b-939f" hidden="false" targetId="9ed0-b443-0fe4-1eaa"/>
             <categoryLink name="Transport" id="8872-6517-0ed8-8d69" hidden="false" targetId="0f65-b14b-ed9f-3e06"/>
             <categoryLink name="Vanguard" id="1c9f-361b-836d-1171" hidden="false" targetId="74de-7c05-a61e-25e8"/>
@@ -41,24 +37,23 @@
           </constraints>
         </forceEntry>
       </forceEntries>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <comment>Skirmish Maximum Groups</comment>
-          <modifiers>
-            <modifier field="error" type="add" value="Skirmish has a 9 group maximum">
-              <conditions>
-                <condition childId="group" childName="group" field="forces" scope="parent" shared="true" type="greaterThan" value="8"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-        <modifierGroup type="and">
-          <comment>Clash Maximum Groups</comment>
-        </modifierGroup>
-        <modifierGroup type="and">
-          <comment>Battle Maximum Groups</comment>
-        </modifierGroup>
-      </modifierGroups>
+      <modifiers>
+        <modifier field="dzc-alloc-vanguard" type="increment" value="1">
+          <repeats>
+            <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
+          </repeats>
+        </modifier>
+        <modifier field="dzc-alloc-heavy" type="increment" value="1">
+          <repeats>
+            <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
+          </repeats>
+        </modifier>
+        <modifier field="dzc-alloc-support" type="increment" value="1">
+          <repeats>
+            <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </forceEntry>
   </forceEntries>
   <profileTypes>
@@ -69,6 +64,7 @@
         <characteristicType name="A" id="27fb-180f-6f6d-89a5"/>
         <characteristicType name="DP" id="ada1-0651-9e45-25a3"/>
         <characteristicType name="Special" id="b8cc-6d88-0300-8e94"/>
+        <characteristicType name="Transportation Requirement" id="5a4b-b964-4625-7008"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Infantry" id="60cc-a4a2-7032-d1fe" hidden="false" kind="model">
@@ -80,6 +76,7 @@
         <characteristicType name="B" id="29ac-a8a4-cec6-ad41"/>
         <characteristicType name="DP" id="e517-cfd1-1a03-e2b4"/>
         <characteristicType name="Special" id="a246-5778-fd67-7be8"/>
+        <characteristicType name="Transportation Requirement" id="e5fc-7db6-74f7-3ed2"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Weapons" id="7156-7401-8748-a010" hidden="false" kind="weapon">
@@ -100,6 +97,22 @@
         <characteristicType name="A" id="4aa5-a1c4-d96f-ae5d"/>
         <characteristicType name="DP" id="19cc-7233-58f2-ba5b"/>
         <characteristicType name="Special" id="4355-f6e4-1219-6938"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="RM Storage" id="ba7b-4507-b5b4-9ede" hidden="false" kind="model">
+      <characteristicTypes>
+        <characteristicType name="RM" id="3626-8ef7-8d7e-22c5"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Transport" id="afcc-ee02-fc67-1b92" hidden="false" kind="model">
+      <characteristicTypes>
+        <characteristicType name="Type" id="4ba5-be04-beb3-9ee6"/>
+        <characteristicType name="Mv" id="c9b2-760b-2af3-7b82"/>
+        <characteristicType name="A" id="6523-65cf-fa99-e8d7"/>
+        <characteristicType name="DP" id="75a7-af03-3e2a-7c0a"/>
+        <characteristicType name="Special" id="3aee-eccb-7244-e36a"/>
+        <characteristicType name="Transportation Requirement" id="49fb-2da3-876e-9ae0"/>
+        <characteristicType name="Transport Capacity" id="caae-4cd1-126f-bcf8"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -335,16 +348,4 @@
       <description>This Weapon reduces the target&apos;s Ev by X to a minimum of 0. For example, T2 would reduce Ev3 to Ev1.</description>
     </rule>
   </sharedRules>
-  <sharedSelectionEntries>
-    <selectionEntry name="Game Size" id="f476-70e4-d789-fa76" hidden="false" import="true" type="upgrade"/>
-  </sharedSelectionEntries>
-  <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Game Size" id="b9ee-4435-7bd5-a218" hidden="false">
-      <selectionEntries>
-        <selectionEntry name="Skirmish" id="ca31-0571-2bbc-9f9b" hidden="false" import="true" type="upgrade"/>
-        <selectionEntry name="Clash" id="6833-ae67-1210-10b9" hidden="false" import="true" type="upgrade"/>
-        <selectionEntry name="Battle" id="9a05-a077-d2aa-53e8" hidden="false" import="true" type="upgrade"/>
-      </selectionEntries>
-    </selectionEntryGroup>
-  </sharedSelectionEntryGroups>
 </gameSystem>
