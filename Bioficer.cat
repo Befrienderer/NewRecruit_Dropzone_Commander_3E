@@ -1,41 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="341c-a9a0-8949-4c61" name="Bioficer" gameSystemId="sys-1822-fb7b-9057-840f" gameSystemRevision="1" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <sharedSelectionEntries>
-    <selectionEntry type="unit" import="true" name="Drones" hidden="false" id="ccbb-8f16-10ca-ae23">
-      <infoLinks>
-        <infoLink name="Drone" id="b880-36dd-54a8-7a1a" hidden="false" type="profile" targetId="2f46-1b95-5a8a-eff1"/>
-      </infoLinks>
-      <costs>
-        <cost name="points" typeId="ab87-75c9-cd43-9593" value="0"/>
-      </costs>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Drones" hidden="false" id="2e66-2993-ca91-be65">
-          <costs>
-            <cost name="points" typeId="ab87-75c9-cd43-9593" value="20"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Decon Rifles" id="365e-7c70-eb25-c5b0" hidden="false" type="profile" targetId="112d-3627-e6de-45d3">
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="always" value="1" field="selections" scope="parent" childId="any" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <categoryLinks>
-            <categoryLink targetId="de22-82b2-a95d-a9b0" id="d9bd-3716-3c45-124d" primary="true" name="Generated"/>
-          </categoryLinks>
-        </selectionEntry>
-      </selectionEntries>
+<catalogue name="Bioficer" id="341c-a9a0-8949-4c61" battleScribeVersion="2.03" gameSystemId="sys-1822-fb7b-9057-840f" gameSystemRevision="1" library="false" revision="2" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry name="Generated" id="de22-82b2-a95d-a9b0" hidden="false"/>
+  </categoryEntries>
+  <entryLinks>
+    <entryLink name="Drones" id="18b4-b80a-eecc-e70f" hidden="false" import="true" targetId="ccbb-8f16-10ca-ae23" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="de22-82b2-a95d-a9b0" id="ab59-59a8-cf62-cfcb" primary="true" name="Generated"/>
+        <categoryLink name="Generated" id="bcc4-15bb-5528-fb50" primary="true" targetId="de22-82b2-a95d-a9b0"/>
       </categoryLinks>
-    </selectionEntry>
-  </sharedSelectionEntries>
+    </entryLink>
+    <entryLink name="Grievance Genitor Ark" id="7d9c-b0d2-af3c-0af5" hidden="false" import="true" targetId="02e6-3319-e3d7-68c4" type="selectionEntry"/>
+  </entryLinks>
+  <publications>
+    <publication name="Github URL" id="818b-5b38-40e8-d7b0" hidden="false" publisherUrl="https://github.com/Befrienderer/NewRecruit_Dropzone_Commander_3E">
+      <comment>GitHub</comment>
+    </publication>
+  </publications>
   <sharedProfiles>
-    <profile name="Drone" typeId="60cc-a4a2-7032-d1fe" typeName="Infantry" hidden="false" id="2f46-1b95-5a8a-eff1">
+    <profile name="Drone" id="2f46-1b95-5a8a-eff1" hidden="false" typeId="60cc-a4a2-7032-d1fe" typeName="Infantry">
       <characteristics>
         <characteristic name="Type" typeId="9d00-f2ed-8a19-e7d9">Infantry</characteristic>
         <characteristic name="Mv" typeId="9167-1a57-de9c-b897">2&quot;</characteristic>
@@ -46,7 +28,7 @@
         <characteristic name="Special" typeId="a246-5778-fd67-7be8">Puppet</characteristic>
       </characteristics>
     </profile>
-    <profile name="Decon Rifles" typeId="7156-7401-8748-a010" typeName="Weapons" hidden="false" id="112d-3627-e6de-45d3">
+    <profile name="Decon Rifles" id="112d-3627-e6de-45d3" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
       <characteristics>
         <characteristic name="Name" typeId="5c93-0ac9-b337-a46f">Decon Rifles</characteristic>
         <characteristic name="Arc" typeId="38a0-14d6-0b55-92a5">F/S/R</characteristic>
@@ -58,15 +40,181 @@
         <characteristic name="Special" typeId="e69e-e7a9-4626-4c80">Decon</characteristic>
       </characteristics>
     </profile>
+    <profile name="Decon Staff" id="2dc0-2fb6-d28b-e412" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Name" typeId="a9dc-0205-0d06-4d25">Decon Staff</characteristic>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">18&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">1</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">3+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">5</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Decon</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Electro-Bombard" id="a12b-c055-89be-27ba" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Name" typeId="a9dc-0205-0d06-4d25">Electro-Bombard</characteristic>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">12&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">1</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">4+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">3</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">AA-S, Indirect, Ineffective: Zones, Suppress</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Grievance Genitor Ark" id="ca00-607f-b369-b766" hidden="false" typeId="f612-c788-3c14-202c" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Type" typeId="6456-92b0-2845-9192">Vehicle</characteristic>
+        <characteristic name="Mv" typeId="523f-2e92-f817-4a35">5&quot;</characteristic>
+        <characteristic name="A" typeId="27fb-180f-6f6d-89a5">5</characteristic>
+        <characteristic name="DP" typeId="ada1-0651-9e45-25a3">4</characteristic>
+        <characteristic name="Special" typeId="b8cc-6d88-0300-8e94">Puppeteer 6&quot;, Skimmer, Surveyor</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
-  <categoryEntries>
-    <categoryEntry name="Generated" id="de22-82b2-a95d-a9b0" hidden="false"/>
-  </categoryEntries>
-  <entryLinks>
-    <entryLink import="true" name="Drones" hidden="false" id="18b4-b80a-eecc-e70f" targetId="ccbb-8f16-10ca-ae23" type="selectionEntry">
+  <sharedRules>
+    <rule name="Puppeteer X&quot;" id="3944-de91-43fa-e9c1" hidden="false">
+      <description>This Unit controls friendly Puppet Units within X&quot; of it, including Occupiers and Occupiers in the same Zone. Any non-Infantry Unit containing a Bioficer Commander gains Puppeteer 9&quot;</description>
+    </rule>
+    <rule name="Collector X" id="b33f-5617-102a-1efd" hidden="false">
+      <comment>from DZC_Bioficer_Stat_Sheets_260730.pdf p1-3</comment>
+      <description>This Unit may hold up to X RM Tokens (see other Bioficer special rules).</description>
+    </rule>
+    <rule name="Genitor X" id="af76-0a2f-1a9f-23fc" hidden="false">
+      <comment>from DZC_Bioficer_Stat_Sheets_260730.pdf p1-3</comment>
+      <description>Bioficer Units with a hollow green square Transport Symbol (e.g. X) are Genitor Units. Genitor Units may begin the game with up to X Raw Materials (RM) tokens aboard them, and they may begin empty—X is shown within their Transport Symbol. When building your Army, RM tokens cost 5pts each and are assigned to those Genitor Units. Their points contribute to their Group&apos;s total cost but do not contribute towards any category. In game, RM tokens are worth 0pts, so they do not contribute to KPs etc. Genitor Units may never have more than X RM tokens aboard—any above X are discarded. Genitor Units may not spend more than X RM tokens per activation (see Generated). RM Tokens may be passed between Genitor and Collector Units within 5&quot; of each other during either Unit&apos;s activation. Genitor Units cannot pass RM Tokens to Collectors. When Genitor Units could normally Disembark a Squad, they may Spawn a Squad of Generated Units. This new Squad must be within its Squad size limits. It Disembarks in the usual way and joins the Genitor Unit&apos;s Group. Genitor Units may Spawn multiple Squads per Round. A Genitor Unit inside a Zone may Spawn Squads at the beginning of its activation. A Genitor Unit may not Spawn a Squad in the same Round as Embarking any Units.</description>
+    </rule>
+    <rule name="Generated X" id="8ef7-4371-33ab-da39" hidden="false">
+      <comment>from DZC_Bioficer_Stat_Sheets_260730.pdf p1-3</comment>
+      <description>Units of the category Generated are Generated Units. These have a solid green square Transport Symbol with thier RM cost X shown within it (e.g. X). These cannot be taken when building your Army. Generated Units may be Spawned by Genitor Units during the game. A Generated Unit costs X RM tokens to Spawn—remove those from the Genitor Unit as they Disembark. This is done by Unit—two Genitors with 3RM tokens each could not Spawn a Unit which costs 6RM. Any number of Generated Squads, even if they are Living Weapons, may Embark into any Genitor Unit/s and may do so in either&apos;s activation. Embark/Disembark limits are ignored for this. When a Squad does, remove it from the game and place X RM tokens for each Embarking Unit aboard those Genitor Unit/s, or half X for Units with half or fewer of their DP remaining. Any Objects a Unit was carrying are passed to that Genitor Unit, even if it&apos;s an Aircraft. Generated Units are worth 5pts multiplied by X in game—shown with a red icon with thier points cost on their stats sheet.</description>
+    </rule>
+    <rule name="Advanced Genitor/ Generated" id="ed69-b198-58a5-bc3d" hidden="false">
+      <comment>from DZC_Bioficer_Stat_Sheets_260730.pdf p1-3</comment>
+      <description>Generated Units with a gold border on their Transport Symbol (e.g. 1) may only be Spawned by a Genitor Unit with a gold number in its Transport Symbol. Advanced Genitors may Spawn non-advanced Generated Units. Advanced Generated Units may Embark into any Genitor as normal.</description>
+    </rule>
+    <rule name="Grubsinger" id="8f0e-0445-151d-ac54" hidden="false">
+      <comment>from DZC_Bioficer_Stat_Sheets_260730.pdf p1-3</comment>
+      <description>Grubs Occupying the same Zone as one or more Units with this rule gain +1OF and +1DF.</description>
+    </rule>
+    <rule name="Puppet" id="ec5c-fce7-3c81-79e3" hidden="false">
+      <comment>from DZC_Bioficer_Stat_Sheets_260730.pdf p1-3</comment>
+      <description>If this Unit it not within control range of a friendly Puppeteer, its OF becomes 1, its DF becomes 6+, it&apos;s Mv becomes 0&quot;, and it may not attack—these cannot be modified. Any special rules it has, besides Living Weapons, UC, and Puppet, cease to take effect. A player with only Puppet Occupiers out of control range may only Contest that Zone. You may not intentionally move Puppet Units out of control range.</description>
+    </rule>
+    <rule name="Decon" id="8ce6-9d65-7316-aaa9" hidden="false">
+      <comment>from DZC_Bioficer_Stat_Sheets_260730.pdf p1-3</comment>
+      <description>Whenever an enemy Unit is destroyed in the same activation as being hit by a friendly Decon Weapon, you may place RM Tokens on 1 Genitor or Collector Unit within 15&quot; of that Unit. If it had 1-2 initial DP, or was an Infantry Unit, place 2 tokens. Otherwise, place 4 tokens. At the end of step 8 of a CQB, if any of your involved Units had Decon Weapons at the start of this CQB, place 2 RM tokens per enemy Infantry Unit destroyed. You cannot do this more times than you had involved Units with Decon Weapons (e.g. if you had 2 Units with Decon Weapons involved, and 3 enemy Units were destroyed, you may place up to 4 tokens).</description>
+    </rule>
+  </sharedRules>
+  <sharedSelectionEntries>
+    <selectionEntry name="Drones" id="ccbb-8f16-10ca-ae23" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink targetId="de22-82b2-a95d-a9b0" id="bcc4-15bb-5528-fb50" primary="true" name="Generated"/>
+        <categoryLink name="Generated" id="ab59-59a8-cf62-cfcb" primary="true" targetId="de22-82b2-a95d-a9b0"/>
       </categoryLinks>
-    </entryLink>
-  </entryLinks>
+      <constraints>
+        <constraint id="06db-6e4b-7317-f67e" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+        <constraint id="c2b9-9284-a828-46f4" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="3"/>
+      </constraints>
+      <costs>
+        <cost name="points" typeId="ab87-75c9-cd43-9593" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Drone" id="b880-36dd-54a8-7a1a" hidden="false" targetId="2f46-1b95-5a8a-eff1" type="profile"/>
+        <infoLink name="Puppet" id="c886-7967-09d0-9697" hidden="false" targetId="ec5c-fce7-3c81-79e3" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Drones" id="2e66-2993-ca91-be65" hidden="false" import="true" type="model">
+          <categoryLinks>
+            <categoryLink name="Generated" id="d9bd-3716-3c45-124d" primary="true" targetId="de22-82b2-a95d-a9b0"/>
+          </categoryLinks>
+          <costs>
+            <cost name="points" typeId="ab87-75c9-cd43-9593" value="0"/>
+            <cost name="Standard" typeId="6086-6c29-a320-0fcc" value="0"/>
+            <cost name="Support" typeId="df03-77d8-4c11-2243" value="0"/>
+            <cost name="Heavy" typeId="72f6-b4d6-1f34-219e" value="0"/>
+            <cost name="Transport" typeId="4306-5775-b4a6-007d" value="0"/>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Decon Rifles" id="365e-7c70-eb25-c5b0" hidden="false" targetId="112d-3627-e6de-45d3" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="false">
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="false" scope="parent" shared="true" type="always" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Grievance Genitor Ark" id="02e6-3319-e3d7-68c4" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Standard" id="129a-b5c8-763b-e85b" hidden="false" primary="true" targetId="c926-5116-6500-dd46"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="533c-aa23-6975-fed4" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+        <constraint id="10d6-99f3-3c1c-817b" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Skimmer" id="3023-d3bd-89ef-770e" hidden="false" targetId="dd00-22e6-fa1d-0c38" type="rule"/>
+        <infoLink name="Surveyor" id="2f8e-510e-9993-20e6" hidden="false" targetId="2057-158a-d752-4b5e" type="rule"/>
+        <infoLink name="Puppeteer X&quot;" id="aa0b-e432-126d-7e7c" hidden="false" targetId="3944-de91-43fa-e9c1" type="rule"/>
+        <infoLink name="Grievance Genitor Ark" id="a877-caef-5421-4f01" hidden="false" targetId="ca00-607f-b369-b766" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Grievance 1" id="2112-eaef-cbae-96bd" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="Vanguard" typeId="ab87-75c9-cd43-9593" value="0"/>
+            <cost name="Standard" typeId="6086-6c29-a320-0fcc" value="0"/>
+            <cost name="Support" typeId="df03-77d8-4c11-2243" value="0"/>
+            <cost name="Heavy" typeId="72f6-b4d6-1f34-219e" value="0"/>
+            <cost name="Transport" typeId="4306-5775-b4a6-007d" value="0"/>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="35"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Staff" id="19d7-feb9-1651-7635" hidden="false" import="true" targetId="92b8-a404-d1ee-0573" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Grievance 2" id="4eb4-9048-1a3a-51cb" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="Vanguard" typeId="ab87-75c9-cd43-9593" value="0"/>
+            <cost name="Standard" typeId="6086-6c29-a320-0fcc" value="0"/>
+            <cost name="Support" typeId="df03-77d8-4c11-2243" value="0"/>
+            <cost name="Heavy" typeId="72f6-b4d6-1f34-219e" value="0"/>
+            <cost name="Transport" typeId="4306-5775-b4a6-007d" value="0"/>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="40"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Electro-Bombard" id="b0de-c9ff-f82b-d061" hidden="false" import="true" targetId="65ff-f12f-cb80-acb7" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Decon Staff" id="92b8-a404-d1ee-0573" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="8851-a5a2-2d41-da0d" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="02cd-b761-bf30-edd6" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Decon Staff" id="8705-1b26-d500-3473" hidden="false" targetId="2dc0-2fb6-d28b-e412" type="profile"/>
+        <infoLink name="Decon" id="9045-72ab-ef73-7985" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Electro-Bombard" id="65ff-f12f-cb80-acb7" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="b016-b3f3-2781-302d" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="7ced-1070-a2cd-f55f" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Electro-Bombard" id="afe5-bba8-1dc7-6de4" hidden="false" targetId="a12b-c055-89be-27ba" type="profile"/>
+        <infoLink name="AA-S" id="8406-4669-af3f-1d34" hidden="false" targetId="dd91-151c-53d9-8b33" type="rule"/>
+        <infoLink name="Indirect" id="c8b0-cc66-3138-3f95" hidden="false" targetId="92f4-d4f3-e013-87d5" type="rule"/>
+        <infoLink name="Ineffective: X" id="c08a-757a-611e-82d7" hidden="false" targetId="74b8-1da5-8b1b-0b6c" type="rule"/>
+        <infoLink name="Suppress" id="5df9-144a-1834-1e16" hidden="false" targetId="7ca5-5adf-e535-8eb2" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+  </sharedSelectionEntries>
 </catalogue>

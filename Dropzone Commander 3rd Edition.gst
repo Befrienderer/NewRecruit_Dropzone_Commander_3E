@@ -1,68 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-1822-fb7b-9057-840f" name="Dropzone Commander 3rd Edition" battleScribeVersion="2.03" revision="3" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" publicationId="170a-7ed5-c49d-82ec">
+<gameSystem name="Dropzone Commander 3rd Edition" id="sys-1822-fb7b-9057-840f" battleScribeVersion="2.03" library="false" publicationId="170a-7ed5-c49d-82ec" revision="3" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Standard" id="c926-5116-6500-dd46"/>
     <categoryEntry name="Vanguard" id="74de-7c05-a61e-25e8" hidden="false"/>
     <categoryEntry name="Support" id="d6a2-4ad7-4694-03ce" hidden="false"/>
     <categoryEntry name="Heavy" id="9ed0-b443-0fe4-1eaa" hidden="false"/>
     <categoryEntry name="Transport" id="0f65-b14b-ed9f-3e06" hidden="false"/>
+    <categoryEntry name="Generated" id="9ca1-02c4-a934-51fe" hidden="false"/>
   </categoryEntries>
-  <forceEntries>
-    <forceEntry name="Skirmish" hidden="false" id="b272-2f7e-0536-f623" sortIndex="1" publicationId="170a-7ed5-c49d-82ec">
-      <categoryLinks>
-        <categoryLink name="Standard" hidden="false" id="default-force-category-link" targetId="c926-5116-6500-dd46"/>
-        <categoryLink name="Heavy" hidden="false" id="8e32-16cd-1d5f-cab7" targetId="9ed0-b443-0fe4-1eaa">
-          <constraints>
-            <constraint type="max" value="100" field="ab87-75c9-cd43-9593" scope="c926-5116-6500-dd46" shared="true" id="925d-09d4-26fc-1057" percentValue="true" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Support" hidden="false" id="e9e4-23b8-3d01-17d2" targetId="d6a2-4ad7-4694-03ce">
-          <constraints>
-            <constraint type="max" value="100" field="ab87-75c9-cd43-9593" scope="c926-5116-6500-dd46" shared="true" id="e0e7-4194-487e-fc42" percentValue="true" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Vanguard" hidden="false" id="67dc-b60c-d8f6-d47f" targetId="74de-7c05-a61e-25e8">
-          <constraints>
-            <constraint type="max" value="100" field="ab87-75c9-cd43-9593" scope="c926-5116-6500-dd46" shared="true" id="9bea-4fb9-9da0-87bf" percentValue="true" includeChildSelections="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Transport" hidden="false" id="1cfa-aa71-b735-e6df" targetId="0f65-b14b-ed9f-3e06"/>
-      </categoryLinks>
-      <costs>
-        <cost name="points" typeId="ab87-75c9-cd43-9593" value="0"/>
-      </costs>
-      <constraints>
-        <constraint type="max" value="25" field="ab87-75c9-cd43-9593" scope="group" shared="true" id="0b02-ea95-8613-be80" includeChildSelections="true" percentValue="true"/>
-      </constraints>
-    </forceEntry>
-    <forceEntry name="Clash" id="71a3-4545-37d2-2e0b" hidden="false" sortIndex="2">
-      <costs>
-        <cost name="points" typeId="ab87-75c9-cd43-9593" value="2000"/>
-      </costs>
-    </forceEntry>
-    <forceEntry name="Battle" id="d677-e9ec-1314-2276" hidden="false" sortIndex="3">
-      <costs>
-        <cost name="points" typeId="ab87-75c9-cd43-9593" value="3000"/>
-      </costs>
-    </forceEntry>
-    <forceEntry name="Reconquest" id="e3f0-4d46-20d5-5157" hidden="false" sortIndex="4">
-      <costs>
-        <cost name="points" typeId="ab87-75c9-cd43-9593" value="3001"/>
-      </costs>
-    </forceEntry>
-  </forceEntries>
-  <publications>
-    <publication name="Dropzone Commander Resources" id="170a-7ed5-c49d-82ec" hidden="false" publisherUrl="https://ttcombat.com/pages/dropzone-commander-resources">
-      <comment>Official rules and army stat cards</comment>
-    </publication>
-  </publications>
   <costTypes>
     <costType name="Vanguard" id="ab87-75c9-cd43-9593" defaultCostLimit="-1"/>
     <costType name="Standard" id="6086-6c29-a320-0fcc" defaultCostLimit="-1"/>
     <costType name="Support" id="df03-77d8-4c11-2243" defaultCostLimit="-1"/>
     <costType name="Heavy" id="72f6-b4d6-1f34-219e" defaultCostLimit="-1"/>
     <costType name="Transport" id="4306-5775-b4a6-007d" defaultCostLimit="-1"/>
+    <costType name="pts" id="cdb2-e720-ea26-2255" defaultCostLimit="-1"/>
   </costTypes>
+  <forceEntries>
+    <forceEntry name="Configuration" id="c15e-98a2-f3dd-1cb4" childForcesLabel="Battlegroups" hidden="false" page="9" publicationId="170a-7ed5-c49d-82ec">
+      <constraints>
+        <constraint id="9ca0-6032-9c53-cca7-min" field="forces" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="1"/>
+        <constraint id="9ca0-6032-9c53-cca7-max" field="forces" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <forceEntries>
+        <forceEntry name="Battlegroup" id="5a24-6c02-1bfc-6fd8" hidden="false">
+          <categoryLinks>
+            <categoryLink name="Standard" id="74f7-2c1e-4140-39ee" hidden="false" targetId="c926-5116-6500-dd46"/>
+            <categoryLink name="Support" id="d404-33bb-8a7c-74c0" hidden="false" targetId="d6a2-4ad7-4694-03ce">
+              <constraints>
+                <constraint id="fd30-7751-55d6-8d56" field="limit::6086-6c29-a320-0fcc" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="force" shared="false" type="max" value="100"/>
+              </constraints>
+            </categoryLink>
+            <categoryLink name="Heavy" id="9033-d7b5-fa7b-939f" hidden="false" targetId="9ed0-b443-0fe4-1eaa"/>
+            <categoryLink name="Transport" id="8872-6517-0ed8-8d69" hidden="false" targetId="0f65-b14b-ed9f-3e06"/>
+            <categoryLink name="Vanguard" id="1c9f-361b-836d-1171" hidden="false" targetId="74de-7c05-a61e-25e8"/>
+            <categoryLink name="Generated" id="c428-d02c-0f8c-3cfd" hidden="false" targetId="9ca1-02c4-a934-51fe"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="a45f-7c60-f9ad-9f9a" field="limit::cdb2-e720-ea26-2255" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="self" shared="false" type="max" value="25"/>
+          </constraints>
+        </forceEntry>
+      </forceEntries>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>Skirmish Maximum Groups</comment>
+          <modifiers>
+            <modifier field="error" type="add" value="Skirmish has a 9 group maximum">
+              <conditions>
+                <condition childId="group" childName="group" field="forces" scope="parent" shared="true" type="greaterThan" value="8"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <comment>Clash Maximum Groups</comment>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <comment>Battle Maximum Groups</comment>
+        </modifierGroup>
+      </modifierGroups>
+    </forceEntry>
+  </forceEntries>
   <profileTypes>
     <profileType name="Vehicle" id="f612-c788-3c14-202c" hidden="false" kind="model">
       <characteristicTypes>
@@ -86,7 +84,6 @@
     </profileType>
     <profileType name="Weapons" id="7156-7401-8748-a010" hidden="false" kind="weapon">
       <characteristicTypes>
-        <characteristicType name="Name" id="a9dc-0205-0d06-4d25" kind="longText"/>
         <characteristicType name="Arc" id="b724-e880-118f-9157" kind="longText"/>
         <characteristicType name="MA" id="5328-b6d9-9d86-b538" kind="longText"/>
         <characteristicType name="R" id="294e-3e47-fc75-3c2c" kind="longText"/>
@@ -106,6 +103,14 @@
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <publications>
+    <publication name="Dropzone Commander Rulebook" id="170a-7ed5-c49d-82ec" hidden="false" publisherUrl="https://ttcombat.com/pages/dropzone-commander-resources">
+      <comment>Official rules and army stat cards</comment>
+    </publication>
+    <publication name="Github URL" id="c32a-4372-6d90-0604" hidden="false" publisherUrl="https://github.com/Befrienderer/NewRecruit_Dropzone_Commander_3E">
+      <comment>GitHub</comment>
+    </publication>
+  </publications>
   <sharedRules>
     <rule name="Aegis X&quot;" id="aa0f-2135-4de1-cf5c" hidden="false">
       <description>Friendly Units within X&quot; of this Unit lose UC</description>
@@ -218,5 +223,128 @@
     <rule name="Wide X&quot;" id="c89b-aa16-0fa0-30d3" hidden="false">
       <description>Units in this Squad must maintain a coherency of X&quot; rather than the usual 3&quot;.</description>
     </rule>
+    <rule name="AA" id="88de-eb1d-e34e-d999" hidden="false">
+      <description>Only AA Weapons can target Aircraft normally. AA Weapons ignore Ev on non-Aircraft. AA Weapons may Reaction Attack—see main rules.</description>
+    </rule>
+    <rule name="AA-R" id="36f4-4b0f-40eb-843f" hidden="false">
+      <description>This AA Weapon may only Reaction Attack but suffers no penalty for doing so.</description>
+    </rule>
+    <rule name="AA-S" id="dd91-151c-53d9-8b33" hidden="false">
+      <description>This AA Weapon may not Reaction Attack.</description>
+    </rule>
+    <rule name="ALT X" id="af07-7d1f-d02d-ae07" hidden="false">
+      <description>Units may only attack with one Weapon with the same ALT number (X) each Round.</description>
+    </rule>
+    <rule name="Articulated" id="29f1-d0c0-5071-3124" hidden="false">
+      <description>Line of Sight may be measured from a point 1&quot; above the model&apos;s centre when attacking with this Weapon.</description>
+    </rule>
+    <rule name="Assault" id="e3e4-f733-9416-237c" hidden="false">
+      <description>This weapon may attack on the same round as Disembarking and/or entering a Zone. If it does so it suffers -2Ac, or -1Ac if it has a R of CC. If a Unit with an Assault Weapon Disembarks then moves 0&quot;, it counts as having moved 1&quot; for attacking purposes.</description>
+    </rule>
+    <rule name="Battery X" id="5e21-6cd3-9fb2-05d6" hidden="false">
+      <description>This Weapon gains X E for each other instance of this Weapon in coherency. Only one Battery Weapon with the same name may attack per Squad per Round. If one attacks, each other instance of that Weapon in coherency counts as having attacked.</description>
+    </rule>
+    <rule name="Blast" id="d842-2066-a58d-1454" hidden="false">
+      <description>This Weapon uses the Blast Template — a 5&quot; diameter circle. First, place the template&apos;s centre over the target&apos;s centre—this is the primary target. Place all templates from one activation&apos;s attacks simultaneously. All Units and Zones within the template are now targets. Roll to hit once against each target for each template. If the primary target was Obscured, everything under the template is Obscured, otherwise Obscured is ignored. Roll D6 times per template against Infantry. If the primary target is a Vehicle with Large or a Zone, do not place the template but roll to hit D3 times. This Weapon can inflict Critical damage against Zones. If the primary target is a Sited Squad, do not place the template. Instead, roll to hit the Squad D6 times. Roll to hit the Zone once. If the primary target is an Aircraft, only Aircraft under the template and not flying high are targets. If the primary target is a non-Aircraft, aircraft are not targets.</description>
+    </rule>
+    <rule name="Concussion" id="4476-dcd3-b9b6-fe06" hidden="false">
+      <description>If a Unit is hit by this Weapon, place a Concussed Status Token on its Squad. Concussed Squads suffer -2Ac. Concussed Infantry also count as Sited in CQBs and do not contribute to Entrances Covered.</description>
+    </rule>
+    <rule name="Critical X" id="e9d1-d4ad-a7ab-4ee6" hidden="false">
+      <description>This Weapon inflicts X additional DP for each Critical it inflicts against Units.</description>
+    </rule>
+    <rule name="Demo X" id="15c2-33e1-4878-4964" hidden="false">
+      <description>This Weapon can inflict Critical damage against Zones. It also inflicts X additional DP for each success when rolling to inflict damage against Zones.</description>
+    </rule>
+    <rule name="Destroyer X+" id="7846-11c1-ed5f-da4f" hidden="false">
+      <description>If this Weapon hits by rolling equal to or higher than X, it will automatically cause a Critical instead of rolling to damage. This counts as a successful roll to damage. This Weapon&apos;s Ac cannot be modified below X.</description>
+    </rule>
+    <rule name="Devastator X" id="3c64-e01c-1d60-0e4e" hidden="false">
+      <description>This Weapon inflicts X additional DP for each success when rolling to inflict damage against Units.</description>
+    </rule>
+    <rule name="Dissipate -X" id="b82e-69b3-9ee2-f441" hidden="false">
+      <description>This Weapon may suffer -X E to double its R value/s. It may do this twice to quadruple its R.</description>
+    </rule>
+    <rule name="Drive-by" id="b08f-9191-dd14-6fd4" hidden="false">
+      <description>This Weapon may measure range and Line of Sight from any point its Unit moved through that activation if it moved in a single straight line. It may pivot before moving.</description>
+    </rule>
+    <rule name="Field" id="b9e1-146a-cd44-20d7" hidden="false">
+      <description>This Weapon does not target anything. Instead, each Zone, Vehicle, and Infantry Unit within its R are assigned attacks equal to its Att. If its R exceeds 6&quot;, Units within half its R are assigned attacks equal to twice its Att. Since it does not target anything, Line of Sight is not needed and friendlies may be hit. Units within this Weapon&apos;s Squad are not damaged by it and cannot receive Concussed, Jammed, or Suppressed Status Tokens from it. If this Weapon has AA, you may assign its attacks only to Aircraft instead of Zones, Vehicles, and Infantry. If this Weapon places Status Tokens, place one on every Squad within its R that could receive the Token. This counts as placing one of that Token.</description>
+    </rule>
+    <rule name="Flame" id="48e8-d54c-be5d-d5c3" hidden="false">
+      <description>This Weapon ignores the Ac penalty against Obscured targets, and it ignores Evasion. Infantry suffer -1DF against this Weapon. This Weapon may target Occupiers as if they were Sited anywhere on a Zone. If friendly Squads are present in this Zone, all misses from your Flame Weapons which targeted enemies in this Zone this activation hit one random friendly Squad in that Zone instead. Flame Weapons with Small Arms may also combine their attacks against Zones. This Weapon can inflict Critical damage against Zones. Flame Weapons gain +1 Demo against Areas.</description>
+    </rule>
+    <rule name="Focus X" id="4b60-49db-0838-d28e" hidden="false">
+      <description>You may discard any number of successful hits from one or more instances of this Weapon to add X E to another remaining hit. For example, two identical E2 Cannons with Focus 1 and 4 attacks each score a total of 6 hits. Their player chooses to discard 4 of these hits to add 2 Energy to each of the remaining hits, resulting in two E4 hits.</description>
+    </rule>
+    <rule name="GB" id="49c6-4e89-2496-23ac" hidden="false">
+      <description>A Weapon with a R value of GB is a Gravity Bomb. It may target anything within 2&quot; of any point its Unit moved over that Round. Line of Sight is checked from that point.</description>
+    </rule>
+    <rule name="Ignores Cover" id="b403-acb4-6774-bfee" hidden="false">
+      <description>This Weapon ignores the Ac penalty for Obscured targets. Sited Infantry may not use their DF value to block hits from this Weapon.</description>
+    </rule>
+    <rule name="Incendiary X" id="ca37-f0d4-9317-8e9e" hidden="false">
+      <description>Each hit from this Weapon that inflicts 1 or more damage against a Building inflicts X additional Collateral Damage hits. Each hit that inflicts 1 or more damage against an Area inflicts 2x X additional Collateral Damage hits</description>
+    </rule>
+    <rule name="Indirect" id="92f4-d4f3-e013-87d5" hidden="false">
+      <description>When attacking with this Weapon, any other friendly Unit may also be used to draw Line of Sight from, in which case it suffers -2Ac. If that friendly Unit has Scout, the -2Ac is ignored. For Sited Units with Indirect, no portion of a Building they Occupy can lie between the face they are Sited on and their target.</description>
+    </rule>
+    <rule name="Ineffective: X" id="74b8-1da5-8b1b-0b6c" hidden="false">
+      <description>This Weapon cannot damage or affect things of the type X.</description>
+    </rule>
+    <rule name="Jammer" id="ba7a-fb18-fbd5-a18d" hidden="false">
+      <description>If a Unit is hit by this Weapon, place a Jammed Status Token on its Squad. Weapons with two R values that attack a Jammed Squad may use their 1st value. Jammed Squads, and Units and Weapons within them, cannot be affected by their player&apos;s Command Cards that take effect while the Squad is Jammed.</description>
+    </rule>
+    <rule name="LX" id="5b10-9d34-e252-a1db" hidden="false">
+      <description>This Weapon may only attack X times/game.</description>
+    </rule>
+    <rule name="Needs Spotter" id="1c8c-14f8-ef92-a5b9" hidden="false">
+      <description>This Weapon&apos;s target must be in Clear or Obscured Line of Sight of a friendly Unit with Scout, or it suffers -2Ac.</description>
+    </rule>
+    <rule name="Overcharge X" id="7c86-07aa-dc31-6345" hidden="false">
+      <description>If its Unit moves 0&quot; (before or after attacking), this Weapon gains +X E that activation.</description>
+    </rule>
+    <rule name="Overwatch" id="1f6e-1058-9b3f-caf9" hidden="false">
+      <description>This Weapon may Reaction Attack against Vehicles and suffers no penalty for doing so. It may only Reaction Attack.</description>
+    </rule>
+    <rule name="Pen X+" id="e44a-38e5-ff9b-a986" hidden="false">
+      <description>When rolling to inflict damage against Units, this Weapon may always succeed on a roll of X+ regardless of E or A values. This cannot be modified. This can alter the roll required for a Critical—Pen 4+ would inflict a Critical on a 6+.</description>
+    </rule>
+    <rule name="Precision X" id="16bd-55fe-2dc9-6884" hidden="false">
+      <description>If its Unit moves 0&quot; (before or after attacking), this Weapon gains +X Ac that activation and if it has Destroyer, it also gains +X Destroyer.</description>
+    </rule>
+    <rule name="Repair X/Y" id="47c0-2459-5b5f-3db1" hidden="false">
+      <description>This Weapon may only target Y, and Y may be a friendly Unit. For each hit by this Weapon, the target regains X lost DP.</description>
+    </rule>
+    <rule name="Seeker" id="3e89-a594-a5e4-9590" hidden="false">
+      <description>This Weapon may target Occupiers as if they were Sited anywhere on a Zone. This Weapon ignores the Ac penalty against Obscured targets if they Occupy the same Zone as friendly Occupiers.</description>
+    </rule>
+    <rule name="Self-Destruct" id="5ffb-1dd0-4c87-68dd" hidden="false">
+      <description>This uses the same rules as a Field Weapon, except that the attacking Unit is destroyed, and Units within its Squad can be damaged by it. If a Unit with a Self-Destruct Weapon is destroyed while not Embarked, roll a D6. On a 4+, the Unit must immediately attack with the Weapon before being removed, even if it could not normally attack.</description>
+    </rule>
+    <rule name="Smoke" id="cd9e-8875-cf23-2bd7" hidden="false">
+      <description>If a Squad receives at least as many hits from Weapons with Smoke during a single activation as it has Units, place an Obscured Status Token on that Squad. Squads with Obscured Status Tokens are Obscured. This Weapon may target friendly Units and may target its own Unit.</description>
+    </rule>
+    <rule name="Strafe" id="d32e-5c37-a9a0-35d3" hidden="false">
+      <description>This Weapon may freely split its attacks against targets within 3&quot; of at least one other Unit it targets. This must be a single chain of targets.</description>
+    </rule>
+    <rule name="Suppress" id="7ca5-5adf-e535-8eb2" hidden="false">
+      <description>If a Unit is hit by this Weapon, place a Suppressed Status Token on its Squad. Suppressed Squads may only move 0&quot; if any Unit within it attacks. Suppressed Fast Movers may not attack.</description>
+    </rule>
+    <rule name="TX" id="d505-bd27-56c8-5e5f" hidden="false">
+      <description>This Weapon reduces the target&apos;s Ev by X to a minimum of 0. For example, T2 would reduce Ev3 to Ev1.</description>
+    </rule>
   </sharedRules>
+  <sharedSelectionEntries>
+    <selectionEntry name="Game Size" id="f476-70e4-d789-fa76" hidden="false" import="true" type="upgrade"/>
+  </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Game Size" id="b9ee-4435-7bd5-a218" hidden="false">
+      <selectionEntries>
+        <selectionEntry name="Skirmish" id="ca31-0571-2bbc-9f9b" hidden="false" import="true" type="upgrade"/>
+        <selectionEntry name="Clash" id="6833-ae67-1210-10b9" hidden="false" import="true" type="upgrade"/>
+        <selectionEntry name="Battle" id="9a05-a077-d2aa-53e8" hidden="false" import="true" type="upgrade"/>
+      </selectionEntries>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
 </gameSystem>
