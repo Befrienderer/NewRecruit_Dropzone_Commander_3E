@@ -89,8 +89,19 @@ undo entry). `references/data-model.md` has the literal shapes; the essentials:
   characteristic holds the **at-a-glance list with X values filled in**
   (`Puppeteer 6", Skimmer, Surveyor`).
 - **Weapon profiles**: one per distinct weapon, `typeName` "Weapons",
-  characteristics `Name, Arc, MA, R, Att, Ac, E, Special`. `Special` = the
-  at-a-glance rule list with X filled in (`Ineffective: Zones`, `Decon`).
+  characteristics `Arc, MA, R, Att, Ac, E, Special` (no "Name" — the column shows
+  the profile's node name). `Special` = the at-a-glance rule list with X filled in
+  (`Ineffective: Zones`, `Decon`).
+- **Transport symbols** (see `data-model.md` for the profile-type layout):
+  - **solid** symbol number → `Transportation Requirement` char on the unit's
+    Vehicle/Infantry profile (explicit typeId).
+  - **hollow red** symbol (a transport that *carries* units) → give the unit a
+    **`Transport`**-type profile instead of Vehicle/Aircraft, `Transport Capacity`
+    filled. (True even if the unit's category isn't Transport — e.g. an Auxiliary
+    Transport in the Heavy slot.)
+  - **hollow green** square (Bioficer Genitor) → a **second** `RM Storage` profile
+    (`RM` = the number) **and** a `Genitor X` rule infoLink on the shared unit entry.
+  - `Collector N` in the Special text → a `Collector X` rule infoLink.
 
 ### 3b. Faction-specific special rules → the faction catalogue's `sharedRules`
 
@@ -124,6 +135,10 @@ weapon appears. A bare `profile` node cannot hold rule links — that's why the 
 - `constraints`: squad size. `field:"selections"`, `scope:"self"`, `childId:"model"`,
   `includeChildSelections:true`. `min`/`max` = the squad-size range (equal if fixed).
   **Not** `scope:"model"` — on a unit that walks up to no model and silently does nothing.
+  A **Transport-category** unit (Squad Size "N/A") gets **no** squad constraint.
+  A **Generated** unit (Drones, Hulks) can't be bought in a list — it exists only
+  for in-game spawning; leave its build-time restriction to the list-rules layer,
+  don't invent one here.
 - `infoLinks`: one `type:"rule"` link per unit special rule (generic names,
   targeting the game-system shared rules) + **one** `type:"profile"` link → the
   unit stat profile.
@@ -131,12 +146,14 @@ weapon appears. A bare `profile` node cannot hold rule links — that's why the 
 
 ### 3e. Models — one `type: "model"` entry per loadout
 
-- `name` = the loadout tag from the weapon rows (`Grievance 1`, `Grievance 2`). A
+- `name` = the loadout tag from the weapon rows (`Grievance 1`, `Thorn 3`). A
   unit with a single fixed loadout still gets one model entry, named after the unit.
-- `costs`: the full six-entry array. `pts` (typeId `cdb2-e720-ea26-2255`) = the
-  points value; Vanguard / Standard / Support / Heavy / Transport = `0`. `pts` is
-  the only cost that ever carries a value — the slot is tracked by the category,
-  not a per-slot cost.
+- A weapon row with **no** `(tag)` = every variant carries it → link it on every model.
+  Two weapon rows with the **same** tag (`(Thorn 3)` twice) = that one model links
+  both. A comma-list tag (`(Grievance 1, Grievance 2)`) = link that weapon on each
+  listed model.
+- `costs`: one entry — `[{name:"pts", typeId:"cdb2-e720-ea26-2255", value:<points>}]`.
+  `pts` is the only cost type; the slot is tracked by the unit's category.
 - `entryLinks`: one `type:"selectionEntry"` link per weapon this loadout carries,
   `targetId` = the weapon entry id. If a weapon row is tagged `(Grievance 1, Grievance 2)`
   (comma-separated), that one weapon entry is linked from **both** models.

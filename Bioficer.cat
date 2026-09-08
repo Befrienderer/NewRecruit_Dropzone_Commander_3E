@@ -10,6 +10,16 @@
       </categoryLinks>
     </entryLink>
     <entryLink name="Grievance Genitor Ark" id="7d9c-b0d2-af3c-0af5" hidden="false" import="true" targetId="02e6-3319-e3d7-68c4" type="selectionEntry"/>
+    <entryLink name="Thorn Light Skimmer" id="d221-b4e7-ff51-40c8" hidden="false" import="true" targetId="ab8c-a2c7-720a-93a6" type="selectionEntry"/>
+    <entryLink name="Surge Gunship" id="7114-318a-f8ea-5f89" hidden="false" import="true" targetId="f757-1ebf-b413-ce59" type="selectionEntry"/>
+    <entryLink name="Tusk Main Battle Skimmer" id="536d-0883-ece6-2cc8" hidden="false" import="true" targetId="9e82-8912-ebee-adc6" type="selectionEntry"/>
+    <entryLink name="Tangent Support Skimmer" id="7d74-24a8-aa03-241f" hidden="false" import="true" targetId="69f1-4300-1040-f336" type="selectionEntry"/>
+    <entryLink name="Silence Heavy Gunship" id="1c37-bf3a-30c6-1bb4" hidden="false" import="true" targetId="e202-e092-8045-e83a" type="selectionEntry"/>
+    <entryLink name="Gyro Aero-Genitor" id="3605-8a66-c9b9-49bb" hidden="false" import="true" targetId="af27-12fb-05ed-478c" type="selectionEntry"/>
+    <entryLink name="Data Strike Dropship" id="8b9a-51b0-7c08-daab" hidden="false" import="true" targetId="4aa9-4656-e7c9-546c" type="selectionEntry"/>
+    <entryLink name="Device Dropship" id="e9af-48ca-1696-4ad9" hidden="false" import="true" targetId="a69c-4076-8a78-ade5" type="selectionEntry"/>
+    <entryLink name="Digit Light Dropship" id="2e14-fe41-d7af-ee53" hidden="false" import="true" targetId="f1b5-66be-69c9-f2c7" type="selectionEntry"/>
+    <entryLink name="Hulks" id="abf1-1a87-44ed-b040" hidden="false" import="true" targetId="11fa-a845-af42-752f" type="selectionEntry"/>
   </entryLinks>
   <publications>
     <publication name="Github URL" id="818b-5b38-40e8-d7b0" hidden="false" publisherUrl="https://github.com/Befrienderer/NewRecruit_Dropzone_Commander_3E">
@@ -26,23 +36,22 @@
         <characteristic name="B" typeId="29ac-a8a4-cec6-ad41">A</characteristic>
         <characteristic name="DP" typeId="e517-cfd1-1a03-e2b4">5</characteristic>
         <characteristic name="Special" typeId="a246-5778-fd67-7be8">Puppet</characteristic>
+        <characteristic name="Transportation Requirement" typeId="e5fc-7db6-74f7-3ed2"/>
       </characteristics>
     </profile>
     <profile name="Decon Rifles" id="112d-3627-e6de-45d3" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
       <characteristics>
-        <characteristic name="Name" typeId="5c93-0ac9-b337-a46f">Decon Rifles</characteristic>
-        <characteristic name="Arc" typeId="38a0-14d6-0b55-92a5">F/S/R</characteristic>
-        <characteristic name="MA" typeId="2695-9f7f-7f24-23d4">Full</characteristic>
-        <characteristic name="R" typeId="a82b-805b-19a7-b5ea">18&quot;</characteristic>
-        <characteristic name="Att" typeId="a231-54d0-24e7-04be">5</characteristic>
-        <characteristic name="Ac" typeId="5bc5-dbfb-01f2-69fc">3+</characteristic>
-        <characteristic name="E" typeId="50b3-289f-aebe-737d">S1</characteristic>
-        <characteristic name="Special" typeId="e69e-e7a9-4626-4c80">Decon</characteristic>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S/R</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">18&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">5</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">3+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">S1</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Decon</characteristic>
       </characteristics>
     </profile>
     <profile name="Decon Staff" id="2dc0-2fb6-d28b-e412" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
       <characteristics>
-        <characteristic name="Name" typeId="a9dc-0205-0d06-4d25">Decon Staff</characteristic>
         <characteristic name="Arc" typeId="b724-e880-118f-9157">F</characteristic>
         <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
         <characteristic name="R" typeId="294e-3e47-fc75-3c2c">18&quot;</characteristic>
@@ -54,7 +63,6 @@
     </profile>
     <profile name="Electro-Bombard" id="a12b-c055-89be-27ba" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
       <characteristics>
-        <characteristic name="Name" typeId="a9dc-0205-0d06-4d25">Electro-Bombard</characteristic>
         <characteristic name="Arc" typeId="b724-e880-118f-9157">F</characteristic>
         <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
         <characteristic name="R" typeId="294e-3e47-fc75-3c2c">12&quot;</characteristic>
@@ -71,6 +79,330 @@
         <characteristic name="A" typeId="27fb-180f-6f6d-89a5">5</characteristic>
         <characteristic name="DP" typeId="ada1-0651-9e45-25a3">4</characteristic>
         <characteristic name="Special" typeId="b8cc-6d88-0300-8e94">Puppeteer 6&quot;, Skimmer, Surveyor</characteristic>
+        <characteristic name="Transportation Requirement" typeId="5a4b-b964-4625-7008">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Grievance Genitor Ark" id="fea9-0b2a-00a7-5951" hidden="false" typeId="ba7b-4507-b5b4-9ede" typeName="RM Storage">
+      <characteristics>
+        <characteristic name="RM" typeId="3626-8ef7-8d7e-22c5">12</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Decon Stave" id="eb87-159c-5f38-5522" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">5&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">24&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">1</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">3+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">5</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Decon, Precision 2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Lightmaw" id="9a35-eae3-b672-a278" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">5&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">24&quot;/6&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">1</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">4+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">7</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Demo 0, Precision 2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Ghost Circuit, wide" id="e3e5-3b6b-700c-676b" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">5&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">12&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">2</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">2+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">S1</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Alt 1, Decon, Flame</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Ghost Circuit, narrow" id="da23-3deb-bca0-ab97" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">5&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">12&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">1</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">2+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">5</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Alt 1, Decon, Pen 6+</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Decon Pulse" id="3bff-bf1f-fb5b-1629" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">5&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">5&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">1</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">5+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">6</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Decon, Precision 2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Decon Cannon Pair" id="a41d-0750-381f-64d7" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">5&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">24&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">2</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">3+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">7</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Decon, Precision 1, Strafe</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Twin Scythes Pair" id="14db-09ce-f141-18fe" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">5&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">∞</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">4</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">2+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">2</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Focus 2, Strafe, T1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Heavy Lightmaw Pair" id="0758-3ed6-0e02-4852" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">5&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">24&quot;/6&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">2</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">4+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">8</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Demo 0, Devastator 1, Precision 2, Strafe</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Ghost Orbit Pair, wide" id="5b95-cdab-aa07-fc40" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">5&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">12&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">6</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">2+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">S1</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Alt 1, Decon, Flame, Strafe</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Ghost Orbit Pair, narrow" id="7119-55ed-f9a8-5783" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">5&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">12&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">2</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">2+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">5</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Alt 1, Decon, Pen 5+, Strafe</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Thorn Light Skimmer" id="d994-3399-5cdb-e87c" hidden="false" typeId="f612-c788-3c14-202c" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Type" typeId="6456-92b0-2845-9192">Vehicle</characteristic>
+        <characteristic name="Mv" typeId="523f-2e92-f817-4a35">10&quot;</characteristic>
+        <characteristic name="A" typeId="27fb-180f-6f6d-89a5">4</characteristic>
+        <characteristic name="DP" typeId="ada1-0651-9e45-25a3">1</characteristic>
+        <characteristic name="Special" typeId="b8cc-6d88-0300-8e94">Ev2, Skimmer</characteristic>
+        <characteristic name="Transportation Requirement" typeId="5a4b-b964-4625-7008">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Surge Gunship" id="38a3-506e-6225-021d" hidden="false" typeId="5340-cfb3-0c68-faef" typeName="Aircraft">
+      <characteristics>
+        <characteristic name="Type" typeId="a50c-afb4-6143-0acd">Aircraft</characteristic>
+        <characteristic name="Mv" typeId="1376-a099-7283-1cbc">15&quot;</characteristic>
+        <characteristic name="A" typeId="4aa5-a1c4-d96f-ae5d">3</characteristic>
+        <characteristic name="DP" typeId="19cc-7233-58f2-ba5b">2</characteristic>
+        <characteristic name="Special" typeId="4355-f6e4-1219-6938">Ev1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Twin Barb Destructor" id="3195-2224-ed20-cd95" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">∞/36&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">4</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">2+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">4</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Decon, Pen 6+</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bisection Organ" id="928b-e3cb-be37-2ee7" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">18&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">1</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">3+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">6</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Demo 1, Devastator D3+1, Precision 1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Scythe Battery" id="995d-22ad-568f-18d0" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">∞</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">3</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">2+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">2</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Focus 2, Strafe, T1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Winnow Web" id="b6df-0d89-cd53-b838" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">15&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">8</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">4+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">2</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">AA, Decon, Strafe, T1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Barb Spitter" id="4ffe-c3ce-d088-1c8b" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">∞/36&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">2</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">3+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">4</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">AA-S, Pen 6+</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Quake Howitzer" id="c85b-3275-688c-8970" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">18&quot;/6&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">3</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">5+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">6</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Demo 1, Indirect, Suppress</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Decon Wave" id="26fc-9d8b-c0a9-8d63" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">5&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">5&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">2</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">5+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">6</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Decon, Precision 2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Decon Zap" id="c496-be6c-9673-6dfe" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">10&quot;</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">5&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">1</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">4+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">4</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">Decon</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Winnow Carbines" id="7432-1537-1f24-7229" hidden="false" typeId="7156-7401-8748-a010" typeName="Weapons">
+      <characteristics>
+        <characteristic name="Arc" typeId="b724-e880-118f-9157">F/S/R</characteristic>
+        <characteristic name="MA" typeId="5328-b6d9-9d86-b538">Full</characteristic>
+        <characteristic name="R" typeId="294e-3e47-fc75-3c2c">9&quot;</characteristic>
+        <characteristic name="Att" typeId="b5e6-d643-83b3-2f7f">6</characteristic>
+        <characteristic name="Ac" typeId="64f2-91e2-ebef-6a63">4+</characteristic>
+        <characteristic name="E" typeId="69ed-8824-e892-ef43">2</characteristic>
+        <characteristic name="Special" typeId="960f-bf25-e324-a0d4">AA, Assault, Decon</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Tusk Main Battle Skimmer" id="fe3f-0c59-bb62-08d4" hidden="false" typeId="f612-c788-3c14-202c" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Type" typeId="6456-92b0-2845-9192">Vehicle</characteristic>
+        <characteristic name="Mv" typeId="523f-2e92-f817-4a35">5&quot;</characteristic>
+        <characteristic name="A" typeId="27fb-180f-6f6d-89a5">6</characteristic>
+        <characteristic name="DP" typeId="ada1-0651-9e45-25a3">2</characteristic>
+        <characteristic name="Special" typeId="b8cc-6d88-0300-8e94">Ev1, Skimmer</characteristic>
+        <characteristic name="Transportation Requirement" typeId="5a4b-b964-4625-7008">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Tangent Support Skimmer" id="a3fc-8bd3-1eb4-7f6a" hidden="false" typeId="f612-c788-3c14-202c" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Type" typeId="6456-92b0-2845-9192">Vehicle</characteristic>
+        <characteristic name="Mv" typeId="523f-2e92-f817-4a35">5&quot;</characteristic>
+        <characteristic name="A" typeId="27fb-180f-6f6d-89a5">6</characteristic>
+        <characteristic name="DP" typeId="ada1-0651-9e45-25a3">2</characteristic>
+        <characteristic name="Special" typeId="b8cc-6d88-0300-8e94">Skimmer, Ev1</characteristic>
+        <characteristic name="Transportation Requirement" typeId="5a4b-b964-4625-7008">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Silence Heavy Gunship" id="8dfb-7f9d-2d97-3b91" hidden="false" typeId="afcc-ee02-fc67-1b92" typeName="Transport">
+      <characteristics>
+        <characteristic name="Type" typeId="4ba5-be04-beb3-9ee6">Aircraft</characteristic>
+        <characteristic name="Mv" typeId="c9b2-760b-2af3-7b82">15&quot;</characteristic>
+        <characteristic name="A" typeId="6523-65cf-fa99-e8d7">3</characteristic>
+        <characteristic name="DP" typeId="75a7-af03-3e2a-7c0a">4</characteristic>
+        <characteristic name="Special" typeId="3aee-eccb-7244-e36a">Collector 6</characteristic>
+        <characteristic name="Transportation Requirement" typeId="49fb-2da3-876e-9ae0"/>
+        <characteristic name="Transport Capacity" typeId="caae-4cd1-126f-bcf8">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Gyro Aero-Genitor" id="8b6f-2387-3564-85f8" hidden="false" typeId="5340-cfb3-0c68-faef" typeName="Aircraft">
+      <characteristics>
+        <characteristic name="Type" typeId="a50c-afb4-6143-0acd">Aircraft</characteristic>
+        <characteristic name="Mv" typeId="1376-a099-7283-1cbc">20&quot;</characteristic>
+        <characteristic name="A" typeId="4aa5-a1c4-d96f-ae5d">3</characteristic>
+        <characteristic name="DP" typeId="19cc-7233-58f2-ba5b">1</characteristic>
+        <characteristic name="Special" typeId="4355-f6e4-1219-6938">Puppeteer 4&quot;</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Gyro Aero-Genitor" id="0c4e-d819-a113-7749" hidden="false" typeId="ba7b-4507-b5b4-9ede" typeName="RM Storage">
+      <characteristics>
+        <characteristic name="RM" typeId="3626-8ef7-8d7e-22c5">8</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Data Strike Dropship" id="3bf8-6980-4e10-0818" hidden="false" typeId="afcc-ee02-fc67-1b92" typeName="Transport">
+      <characteristics>
+        <characteristic name="Type" typeId="4ba5-be04-beb3-9ee6">Aircraft</characteristic>
+        <characteristic name="Mv" typeId="c9b2-760b-2af3-7b82">15&quot;</characteristic>
+        <characteristic name="A" typeId="6523-65cf-fa99-e8d7">3</characteristic>
+        <characteristic name="DP" typeId="75a7-af03-3e2a-7c0a">2</characteristic>
+        <characteristic name="Special" typeId="3aee-eccb-7244-e36a">Collector 6</characteristic>
+        <characteristic name="Transportation Requirement" typeId="49fb-2da3-876e-9ae0"/>
+        <characteristic name="Transport Capacity" typeId="caae-4cd1-126f-bcf8">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Device Dropship" id="8872-99ba-012d-7000" hidden="false" typeId="afcc-ee02-fc67-1b92" typeName="Transport">
+      <characteristics>
+        <characteristic name="Type" typeId="4ba5-be04-beb3-9ee6">Aircraft</characteristic>
+        <characteristic name="Mv" typeId="c9b2-760b-2af3-7b82">15&quot;</characteristic>
+        <characteristic name="A" typeId="6523-65cf-fa99-e8d7">3</characteristic>
+        <characteristic name="DP" typeId="75a7-af03-3e2a-7c0a">4</characteristic>
+        <characteristic name="Special" typeId="3aee-eccb-7244-e36a">Collector 12</characteristic>
+        <characteristic name="Transportation Requirement" typeId="49fb-2da3-876e-9ae0"/>
+        <characteristic name="Transport Capacity" typeId="caae-4cd1-126f-bcf8">8</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Digit Light Dropship" id="e71d-6501-89d9-60ec" hidden="false" typeId="afcc-ee02-fc67-1b92" typeName="Transport">
+      <characteristics>
+        <characteristic name="Type" typeId="4ba5-be04-beb3-9ee6">Aircraft</characteristic>
+        <characteristic name="Mv" typeId="c9b2-760b-2af3-7b82">20&quot;</characteristic>
+        <characteristic name="A" typeId="6523-65cf-fa99-e8d7">3</characteristic>
+        <characteristic name="DP" typeId="75a7-af03-3e2a-7c0a">1</characteristic>
+        <characteristic name="Special" typeId="3aee-eccb-7244-e36a">-</characteristic>
+        <characteristic name="Transportation Requirement" typeId="49fb-2da3-876e-9ae0"/>
+        <characteristic name="Transport Capacity" typeId="caae-4cd1-126f-bcf8">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Hulks" id="f647-c28f-aebf-25dc" hidden="false" typeId="60cc-a4a2-7032-d1fe" typeName="Infantry">
+      <characteristics>
+        <characteristic name="Type" typeId="9d00-f2ed-8a19-e7d9">Infantry</characteristic>
+        <characteristic name="Mv" typeId="9167-1a57-de9c-b897">2&quot;</characteristic>
+        <characteristic name="OF" typeId="cfcb-c9c3-d604-09b6">2</characteristic>
+        <characteristic name="DF" typeId="57d7-2739-2815-df4f">3+</characteristic>
+        <characteristic name="B" typeId="29ac-a8a4-cec6-ad41">A</characteristic>
+        <characteristic name="DP" typeId="e517-cfd1-1a03-e2b4">3</characteristic>
+        <characteristic name="Special" typeId="a246-5778-fd67-7be8">Hardy 4+, Puppet, Strong</characteristic>
+        <characteristic name="Transportation Requirement" typeId="e5fc-7db6-74f7-3ed2"/>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -163,32 +495,36 @@
         <infoLink name="Surveyor" id="2f8e-510e-9993-20e6" hidden="false" targetId="2057-158a-d752-4b5e" type="rule"/>
         <infoLink name="Puppeteer X&quot;" id="aa0b-e432-126d-7e7c" hidden="false" targetId="3944-de91-43fa-e9c1" type="rule"/>
         <infoLink name="Grievance Genitor Ark" id="a877-caef-5421-4f01" hidden="false" targetId="ca00-607f-b369-b766" type="profile"/>
+        <infoLink name="Grievance Genitor Ark" id="ca55-6ae4-0352-d632" hidden="false" targetId="fea9-0b2a-00a7-5951" type="profile"/>
+        <infoLink name="Genitor X" id="3956-2262-90ff-7ea2" hidden="false" targetId="af76-0a2f-1a9f-23fc" type="rule"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry name="Grievance 1" id="2112-eaef-cbae-96bd" hidden="false" import="true" type="model">
           <costs>
-            <cost name="Vanguard" typeId="ab87-75c9-cd43-9593" value="0"/>
-            <cost name="Standard" typeId="6086-6c29-a320-0fcc" value="0"/>
-            <cost name="Support" typeId="df03-77d8-4c11-2243" value="0"/>
-            <cost name="Heavy" typeId="72f6-b4d6-1f34-219e" value="0"/>
-            <cost name="Transport" typeId="4306-5775-b4a6-007d" value="0"/>
             <cost name="pts" typeId="cdb2-e720-ea26-2255" value="35"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="35"/>
           </costs>
           <entryLinks>
             <entryLink name="Decon Staff" id="19d7-feb9-1651-7635" hidden="false" import="true" targetId="92b8-a404-d1ee-0573" type="selectionEntry"/>
+            <entryLink name="Raw Material" id="42aa-c374-a63c-2427" hidden="false" import="true" targetId="e218-761a-0442-82d3" type="selectionEntry">
+              <constraints>
+                <constraint id="e2ba-2e93-9ced-37c8" field="selections" scope="parent" shared="false" type="max" value="12"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </selectionEntry>
         <selectionEntry name="Grievance 2" id="4eb4-9048-1a3a-51cb" hidden="false" import="true" type="model">
           <costs>
-            <cost name="Vanguard" typeId="ab87-75c9-cd43-9593" value="0"/>
-            <cost name="Standard" typeId="6086-6c29-a320-0fcc" value="0"/>
-            <cost name="Support" typeId="df03-77d8-4c11-2243" value="0"/>
-            <cost name="Heavy" typeId="72f6-b4d6-1f34-219e" value="0"/>
-            <cost name="Transport" typeId="4306-5775-b4a6-007d" value="0"/>
             <cost name="pts" typeId="cdb2-e720-ea26-2255" value="40"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="40"/>
           </costs>
           <entryLinks>
             <entryLink name="Electro-Bombard" id="b0de-c9ff-f82b-d061" hidden="false" import="true" targetId="65ff-f12f-cb80-acb7" type="selectionEntry"/>
+            <entryLink name="Raw Material" id="72da-33d5-9eca-900a" hidden="false" import="true" targetId="e218-761a-0442-82d3" type="selectionEntry">
+              <constraints>
+                <constraint id="0939-d1d3-25d1-44cd" field="selections" scope="parent" shared="false" type="max" value="12"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -215,6 +551,592 @@
         <infoLink name="Ineffective: X" id="c08a-757a-611e-82d7" hidden="false" targetId="74b8-1da5-8b1b-0b6c" type="rule"/>
         <infoLink name="Suppress" id="5df9-144a-1834-1e16" hidden="false" targetId="7ca5-5adf-e535-8eb2" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Raw Material" id="e218-761a-0442-82d3" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="Raw Materials" id="2644-26b6-0f9b-4415" hidden="false" primary="true" targetId="2b55-17b3-4772-a8d4"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="cdb2-e720-ea26-2255" value="5"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry name="Decon Stave" id="f350-9a42-cd6f-c67c" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="598e-4a91-6c70-4f5e" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="2175-5632-6581-771b" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Decon Stave" id="5c22-0a1a-bac1-d7c1" hidden="false" targetId="eb87-159c-5f38-5522" type="profile"/>
+        <infoLink name="Decon" id="c6e5-8f7d-a02a-9c4a" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+        <infoLink name="Precision X" id="4a50-466e-b597-cd0a" hidden="false" targetId="16bd-55fe-2dc9-6884" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Lightmaw" id="86be-616b-f371-4de4" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="ba4e-c7f9-215b-a426" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="8d25-955c-1939-d7bf" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Lightmaw" id="5c1e-a825-240f-8d3c" hidden="false" targetId="9a35-eae3-b672-a278" type="profile"/>
+        <infoLink name="Demo X" id="44a8-c829-e393-b248" hidden="false" targetId="15c2-33e1-4878-4964" type="rule"/>
+        <infoLink name="Precision X" id="3c6e-fa8a-22bb-bacc" hidden="false" targetId="16bd-55fe-2dc9-6884" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Ghost Circuit, wide" id="06b3-6658-05d2-3511" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="9171-c133-ff21-caf6" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="bd6c-d60b-6332-1e0e" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Ghost Circuit, wide" id="b388-028c-aa33-993e" hidden="false" targetId="e3e5-3b6b-700c-676b" type="profile"/>
+        <infoLink name="ALT X" id="8856-7aa2-7962-4006" hidden="false" targetId="af07-7d1f-d02d-ae07" type="rule"/>
+        <infoLink name="Decon" id="c6a4-aec8-0a60-4061" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+        <infoLink name="Flame" id="c789-57ea-8af0-5796" hidden="false" targetId="48e8-d54c-be5d-d5c3" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Ghost Circuit, narrow" id="c02e-065b-4360-13fa" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="b472-1678-ba9a-7edc" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="ef74-781d-7eaf-1f4b" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Ghost Circuit, narrow" id="27cd-8199-da57-dd62" hidden="false" targetId="da23-3deb-bca0-ab97" type="profile"/>
+        <infoLink name="ALT X" id="51ab-7a0a-14ee-e872" hidden="false" targetId="af07-7d1f-d02d-ae07" type="rule"/>
+        <infoLink name="Decon" id="7123-6f80-5fa9-1aa9" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+        <infoLink name="Pen X+" id="d77a-0680-03dd-c006" hidden="false" targetId="e44a-38e5-ff9b-a986" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Decon Pulse" id="d2e6-caf3-d151-d2de" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="eb92-7bc5-132e-808d" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="bee1-49bc-cc10-2294" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Decon Pulse" id="1d84-65c2-c340-42f0" hidden="false" targetId="3bff-bf1f-fb5b-1629" type="profile"/>
+        <infoLink name="Decon" id="9867-2533-6059-89da" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+        <infoLink name="Precision X" id="e2aa-f341-a7c6-f97f" hidden="false" targetId="16bd-55fe-2dc9-6884" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Decon Cannon Pair" id="9ec5-da60-a087-4c87" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="bbf0-77b1-b1e3-406f" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="3338-eb40-4ad9-3d55" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Decon Cannon Pair" id="7f4e-d0cb-7a0e-35c8" hidden="false" targetId="a41d-0750-381f-64d7" type="profile"/>
+        <infoLink name="Decon" id="67d7-7a72-a639-b5fa" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+        <infoLink name="Precision X" id="1648-0fad-6df7-b6fd" hidden="false" targetId="16bd-55fe-2dc9-6884" type="rule"/>
+        <infoLink name="Strafe" id="b81d-855b-308f-71b5" hidden="false" targetId="d32e-5c37-a9a0-35d3" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Twin Scythes Pair" id="f93b-c62b-9cf3-7859" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="c03f-a221-d6ca-fdea" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="0ae4-4c85-ea72-2221" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Twin Scythes Pair" id="8cda-c615-4a33-62f6" hidden="false" targetId="14db-09ce-f141-18fe" type="profile"/>
+        <infoLink name="Focus X" id="1b56-5c64-a551-29d5" hidden="false" targetId="4b60-49db-0838-d28e" type="rule"/>
+        <infoLink name="Strafe" id="5620-285c-3688-f3cf" hidden="false" targetId="d32e-5c37-a9a0-35d3" type="rule"/>
+        <infoLink name="TX" id="c55d-0553-58c2-e080" hidden="false" targetId="d505-bd27-56c8-5e5f" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Heavy Lightmaw Pair" id="9450-3d62-be2e-6033" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="013b-7e72-a044-0436" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="3d7b-ac9c-1a3c-05d9" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Heavy Lightmaw Pair" id="2215-fbf6-47f6-8fb5" hidden="false" targetId="0758-3ed6-0e02-4852" type="profile"/>
+        <infoLink name="Demo X" id="5934-836a-c981-3201" hidden="false" targetId="15c2-33e1-4878-4964" type="rule"/>
+        <infoLink name="Devastator X" id="c157-3072-eb6e-e5c2" hidden="false" targetId="3c64-e01c-1d60-0e4e" type="rule"/>
+        <infoLink name="Precision X" id="5959-4725-98d8-0202" hidden="false" targetId="16bd-55fe-2dc9-6884" type="rule"/>
+        <infoLink name="Strafe" id="e2ee-d9a3-389f-8202" hidden="false" targetId="d32e-5c37-a9a0-35d3" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Ghost Orbit Pair, wide" id="96e5-79c3-5699-f982" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="b20e-c974-67ff-1951" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="603f-6cc0-49fa-14fc" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Ghost Orbit Pair, wide" id="26c6-48ac-c452-a0a7" hidden="false" targetId="5b95-cdab-aa07-fc40" type="profile"/>
+        <infoLink name="ALT X" id="bfc2-c4ec-c5a5-962f" hidden="false" targetId="af07-7d1f-d02d-ae07" type="rule"/>
+        <infoLink name="Decon" id="8591-054b-8f2d-87ef" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+        <infoLink name="Flame" id="232b-cc5f-79ff-0dc6" hidden="false" targetId="48e8-d54c-be5d-d5c3" type="rule"/>
+        <infoLink name="Strafe" id="aaae-edc7-9183-18d9" hidden="false" targetId="d32e-5c37-a9a0-35d3" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Ghost Orbit Pair, narrow" id="c62b-267f-b9a6-7f0d" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="429c-05a8-b64b-625f" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="bf5e-21df-c19a-cde1" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Ghost Orbit Pair, narrow" id="ecb8-9f62-6e49-df67" hidden="false" targetId="7119-55ed-f9a8-5783" type="profile"/>
+        <infoLink name="ALT X" id="af18-f90f-c56f-1612" hidden="false" targetId="af07-7d1f-d02d-ae07" type="rule"/>
+        <infoLink name="Decon" id="dd1c-c496-4f4d-e829" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+        <infoLink name="Pen X+" id="833b-442e-fe71-d9de" hidden="false" targetId="e44a-38e5-ff9b-a986" type="rule"/>
+        <infoLink name="Strafe" id="1627-cc54-84f2-0d99" hidden="false" targetId="d32e-5c37-a9a0-35d3" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Thorn Light Skimmer" id="ab8c-a2c7-720a-93a6" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Standard" id="b82e-033d-e882-c34a" hidden="false" primary="true" targetId="c926-5116-6500-dd46"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="5c2a-e37a-a816-72f8" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+        <constraint id="d801-94d1-9031-e3bd" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="8"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Ev X (Evasion)" id="a645-c150-f48a-c77a" hidden="false" targetId="bec3-20fe-557b-33cd" type="rule"/>
+        <infoLink name="Skimmer" id="1747-207d-875d-5db4" hidden="false" targetId="dd00-22e6-fa1d-0c38" type="rule"/>
+        <infoLink name="Thorn Light Skimmer" id="f0cf-ba3b-b557-6049" hidden="false" targetId="d994-3399-5cdb-e87c" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Thorn 1" id="bd7e-558b-09cc-e44d" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Stave" id="c295-5306-01f3-9ba7" hidden="false" import="true" targetId="f350-9a42-cd6f-c67c" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Thorn 2" id="dc5b-e9fe-21be-a3f9" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Lightmaw" id="0352-b2f7-c6dc-8e36" hidden="false" import="true" targetId="86be-616b-f371-4de4" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Thorn 3" id="18b8-b0d4-180d-07f5" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Ghost Circuit, wide" id="721a-6c71-65dd-b7c2" hidden="false" import="true" targetId="06b3-6658-05d2-3511" type="selectionEntry"/>
+            <entryLink name="Ghost Circuit, narrow" id="30de-0bea-850b-a25f" hidden="false" import="true" targetId="c02e-065b-4360-13fa" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Surge Gunship" id="f757-1ebf-b413-ce59" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Support" id="1d38-863b-dba3-e341" hidden="false" primary="true" targetId="d6a2-4ad7-4694-03ce"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="bdbb-f449-ae9d-e40f" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+        <constraint id="4516-2fc3-fcbf-b81b" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Ev X (Evasion)" id="9792-ccff-af15-a0f0" hidden="false" targetId="bec3-20fe-557b-33cd" type="rule"/>
+        <infoLink name="Surge Gunship" id="080e-0d42-a7be-2ce0" hidden="false" targetId="38a3-506e-6225-021d" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Surge 1" id="3512-a857-436c-3f7a" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="55"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="55"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Pulse" id="accf-8fd6-14ca-1546" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
+            <entryLink name="Decon Cannon Pair" id="aaa8-1d0d-4326-3f95" hidden="false" import="true" targetId="9ec5-da60-a087-4c87" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Surge 2" id="5830-84b0-754f-0a98" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="55"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="55"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Pulse" id="f3f1-a2c0-94f0-b2ac" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
+            <entryLink name="Twin Scythes Pair" id="3f27-490d-0982-b0e3" hidden="false" import="true" targetId="f93b-c62b-9cf3-7859" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Surge 3" id="0d87-a7ba-6dca-b937" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="55"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="55"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Pulse" id="a537-1593-1c2f-d250" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
+            <entryLink name="Heavy Lightmaw Pair" id="11c7-a841-88f8-b847" hidden="false" import="true" targetId="9450-3d62-be2e-6033" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Surge 4" id="af8a-a615-7d4a-b7c5" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="60"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="60"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Pulse" id="0e2f-87f7-6403-8b35" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
+            <entryLink name="Ghost Orbit Pair, wide" id="fc57-d157-2602-7ff9" hidden="false" import="true" targetId="96e5-79c3-5699-f982" type="selectionEntry"/>
+            <entryLink name="Ghost Orbit Pair, narrow" id="8a5e-5c10-727b-e99d" hidden="false" import="true" targetId="c62b-267f-b9a6-7f0d" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Twin Barb Destructor" id="3f4c-eb47-0b6f-54f2" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="84a6-c97f-2abf-fa93" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="3bed-6419-bf6e-59c2" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Twin Barb Destructor" id="91d3-baad-fc35-f676" hidden="false" targetId="3195-2224-ed20-cd95" type="profile"/>
+        <infoLink name="Decon" id="aab6-8a03-7f55-6019" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+        <infoLink name="Pen X+" id="e831-651c-935c-23ee" hidden="false" targetId="e44a-38e5-ff9b-a986" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Bisection Organ" id="28d4-803c-0216-3b40" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="9fa4-988a-3c50-2571" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="b19c-d4a3-b3a8-a323" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Bisection Organ" id="5206-f59b-f089-f832" hidden="false" targetId="928b-e3cb-be37-2ee7" type="profile"/>
+        <infoLink name="Demo X" id="2f79-fc73-f5bc-1d62" hidden="false" targetId="15c2-33e1-4878-4964" type="rule"/>
+        <infoLink name="Devastator X" id="b6f9-9056-3b0d-fd1b" hidden="false" targetId="3c64-e01c-1d60-0e4e" type="rule"/>
+        <infoLink name="Precision X" id="3699-5e99-7672-a491" hidden="false" targetId="16bd-55fe-2dc9-6884" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Scythe Battery" id="26cb-0256-9962-93c8" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="fe69-a4db-a1f9-454d" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="70f6-50bc-a235-aca9" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Scythe Battery" id="b95b-9d0d-d9e6-e10f" hidden="false" targetId="995d-22ad-568f-18d0" type="profile"/>
+        <infoLink name="Focus X" id="a9ee-e941-9637-d317" hidden="false" targetId="4b60-49db-0838-d28e" type="rule"/>
+        <infoLink name="Strafe" id="06bb-bc4c-2ce9-a1d7" hidden="false" targetId="d32e-5c37-a9a0-35d3" type="rule"/>
+        <infoLink name="TX" id="9f0e-714d-7773-5920" hidden="false" targetId="d505-bd27-56c8-5e5f" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Winnow Web" id="8462-54d2-9787-72db" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="b07b-f5e7-72cd-a518" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="0cb6-c8f3-d24c-0efd" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Winnow Web" id="ee24-7fd2-6b5e-ddd2" hidden="false" targetId="b6df-0d89-cd53-b838" type="profile"/>
+        <infoLink name="AA" id="387f-afbf-48c9-7596" hidden="false" targetId="88de-eb1d-e34e-d999" type="rule"/>
+        <infoLink name="Decon" id="11a0-afc5-6583-f58b" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+        <infoLink name="Strafe" id="bbd2-ed0a-0652-5a3e" hidden="false" targetId="d32e-5c37-a9a0-35d3" type="rule"/>
+        <infoLink name="TX" id="bd92-9e8f-f0b8-6d70" hidden="false" targetId="d505-bd27-56c8-5e5f" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Barb Spitter" id="2931-d8ea-1709-6367" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="8d20-cc06-1119-f31e" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="499e-fe18-9676-95a5" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Barb Spitter" id="48fd-1961-016c-79ec" hidden="false" targetId="4ffe-c3ce-d088-1c8b" type="profile"/>
+        <infoLink name="AA-S" id="4ee9-ce3d-acdb-38d4" hidden="false" targetId="dd91-151c-53d9-8b33" type="rule"/>
+        <infoLink name="Pen X+" id="1ca1-04a5-3905-0bbd" hidden="false" targetId="e44a-38e5-ff9b-a986" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Quake Howitzer" id="e34b-8034-cbae-7ec9" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="7dd3-cab0-147e-8253" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="5544-7877-21dd-56a4" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Quake Howitzer" id="092f-4da7-b3ea-aa5e" hidden="false" targetId="c85b-3275-688c-8970" type="profile"/>
+        <infoLink name="Demo X" id="5068-1b8e-faa1-dcb5" hidden="false" targetId="15c2-33e1-4878-4964" type="rule"/>
+        <infoLink name="Indirect" id="9e9c-96f8-ce65-fbc5" hidden="false" targetId="92f4-d4f3-e013-87d5" type="rule"/>
+        <infoLink name="Suppress" id="0e01-f742-71e9-6df5" hidden="false" targetId="7ca5-5adf-e535-8eb2" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Decon Wave" id="e71c-fb8f-1f4d-f48b" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="7e1b-a5cc-dc5c-d637" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="a475-2c01-2f6a-d8f0" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Decon Wave" id="e573-c428-a634-7bed" hidden="false" targetId="26fc-9d8b-c0a9-8d63" type="profile"/>
+        <infoLink name="Decon" id="66db-9f7d-95f0-ba2a" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+        <infoLink name="Precision X" id="36a1-5a76-8ba7-8cce" hidden="false" targetId="16bd-55fe-2dc9-6884" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Decon Zap" id="f80b-710a-f644-57e3" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="147e-c533-5e9f-c0b9" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="38b6-a245-6edd-c741" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Decon Zap" id="39b2-2498-7ab2-a52e" hidden="false" targetId="c496-be6c-9673-6dfe" type="profile"/>
+        <infoLink name="Decon" id="c20a-89ab-0052-d25b" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Winnow Carbines" id="81e6-68da-8910-3253" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="fce7-ccce-3f57-4e95" automatic="true" field="selections" scope="parent" shared="false" type="min" value="1"/>
+        <constraint id="89f0-8a0c-3048-736c" automatic="true" field="selections" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Winnow Carbines" id="7f0e-254d-3de8-c1e9" hidden="false" targetId="7432-1537-1f24-7229" type="profile"/>
+        <infoLink name="AA" id="210b-9cf0-c34b-aa07" hidden="false" targetId="88de-eb1d-e34e-d999" type="rule"/>
+        <infoLink name="Assault" id="1f61-301d-c508-61e9" hidden="false" targetId="e3e4-f733-9416-237c" type="rule"/>
+        <infoLink name="Decon" id="8d86-4b0f-3b92-a39d" hidden="false" targetId="8ce6-9d65-7316-aaa9" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Tusk Main Battle Skimmer" id="9e82-8912-ebee-adc6" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Standard" id="7726-f096-4428-f071" hidden="false" primary="true" targetId="c926-5116-6500-dd46"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="3233-2610-347b-69a5" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+        <constraint id="1fa8-a280-4cb2-fd2b" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="4"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Ev X (Evasion)" id="f942-0c62-3937-5800" hidden="false" targetId="bec3-20fe-557b-33cd" type="rule"/>
+        <infoLink name="Skimmer" id="1c85-de7f-72fb-16ef" hidden="false" targetId="dd00-22e6-fa1d-0c38" type="rule"/>
+        <infoLink name="Tusk Main Battle Skimmer" id="8685-95c5-6cc1-1cd1" hidden="false" targetId="fe3f-0c59-bb62-08d4" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Tusk 1" id="36e9-57c3-ab9f-5691" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Twin Barb Destructor" id="3223-f80e-ed6d-30f8" hidden="false" import="true" targetId="3f4c-eb47-0b6f-54f2" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Tusk 2" id="dadc-7704-9f43-2532" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Bisection Organ" id="e676-1c87-e4f3-b5eb" hidden="false" import="true" targetId="28d4-803c-0216-3b40" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Tusk 3" id="e287-4ce0-e66e-ae92" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="50"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="50"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Scythe Battery" id="24ee-a199-bc52-b22b" hidden="false" import="true" targetId="26cb-0256-9962-93c8" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Tangent Support Skimmer" id="69f1-4300-1040-f336" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Support" id="92d8-28d2-8737-301c" hidden="false" primary="true" targetId="d6a2-4ad7-4694-03ce"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="8dbe-3ff4-f9b1-7d34" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+        <constraint id="c2ee-6a3a-ff08-3cc5" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="4"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Ev X (Evasion)" id="aed4-1d1d-7657-8aa2" hidden="false" targetId="bec3-20fe-557b-33cd" type="rule"/>
+        <infoLink name="Skimmer" id="546f-8110-1aca-8bd0" hidden="false" targetId="dd00-22e6-fa1d-0c38" type="rule"/>
+        <infoLink name="Tangent Support Skimmer" id="c008-d7da-3aa5-278b" hidden="false" targetId="a3fc-8bd3-1eb4-7f6a" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Tangent 1" id="7e44-9b61-c589-18a0" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Winnow Web" id="0621-0167-874f-aa8e" hidden="false" import="true" targetId="8462-54d2-9787-72db" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Tangent 2" id="9134-4406-a9da-150d" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Barb Spitter" id="8a82-19a3-4139-92af" hidden="false" import="true" targetId="2931-d8ea-1709-6367" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Tangent 3" id="400c-a100-d340-e21d" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Quake Howitzer" id="e622-5023-addb-88ab" hidden="false" import="true" targetId="e34b-8034-cbae-7ec9" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Silence Heavy Gunship" id="e202-e092-8045-e83a" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Heavy" id="3824-32fa-b3e9-c4c9" hidden="false" primary="true" targetId="9ed0-b443-0fe4-1eaa"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="4a81-a97d-d236-aedf" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+        <constraint id="401f-9688-8562-492b" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Collector X" id="3f81-cadf-ca85-bec3" hidden="false" targetId="b33f-5617-102a-1efd" type="rule"/>
+        <infoLink name="Silence Heavy Gunship" id="c592-7c1e-1b21-30db" hidden="false" targetId="8dfb-7f9d-2d97-3b91" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Silence 1" id="3c12-ece6-6b6f-8fd2" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="85"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="85"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Wave" id="ede8-3028-d4df-a0f3" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
+            <entryLink name="Decon Cannon Pair" id="a578-33f3-b10f-0629" hidden="false" import="true" targetId="9ec5-da60-a087-4c87" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Silence 2" id="868f-51ef-6e23-ec4f" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="85"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="85"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Wave" id="799f-a0dc-1858-25a5" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
+            <entryLink name="Twin Scythes Pair" id="234c-f7fa-94da-9c34" hidden="false" import="true" targetId="f93b-c62b-9cf3-7859" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Silence 3" id="fcec-b791-cf81-98bb" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="85"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="85"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Wave" id="4080-c1ee-3bf4-520c" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
+            <entryLink name="Heavy Lightmaw Pair" id="945e-f877-1053-212a" hidden="false" import="true" targetId="9450-3d62-be2e-6033" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry name="Silence 4" id="a26f-c0a4-6993-f7b1" hidden="false" import="true" type="model">
+          <comment>Rare</comment>
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="90"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="90"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Wave" id="4429-5d81-dc8a-84fd" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
+            <entryLink name="Ghost Orbit Pair, wide" id="383f-6af5-a068-2220" hidden="false" import="true" targetId="96e5-79c3-5699-f982" type="selectionEntry"/>
+            <entryLink name="Ghost Orbit Pair, narrow" id="d280-aa4b-28e1-c169" hidden="false" import="true" targetId="c62b-267f-b9a6-7f0d" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Gyro Aero-Genitor" id="af27-12fb-05ed-478c" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Vanguard" id="b2c0-08d0-9ea4-db21" hidden="false" primary="true" targetId="74de-7c05-a61e-25e8"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="f3bf-c585-36b0-8784" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+        <constraint id="a676-3e47-1bf0-5de6" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Puppeteer X&quot;" id="bb33-79f5-fc0a-c3d2" hidden="false" targetId="3944-de91-43fa-e9c1" type="rule"/>
+        <infoLink name="Gyro Aero-Genitor" id="a86a-b4a8-806b-1e4a" hidden="false" targetId="8b6f-2387-3564-85f8" type="profile"/>
+        <infoLink name="Gyro Aero-Genitor" id="ecd2-25c5-4f2f-8066" hidden="false" targetId="0c4e-d819-a113-7749" type="profile"/>
+        <infoLink name="Genitor X" id="ac46-1c6f-aa5e-6712" hidden="false" targetId="af76-0a2f-1a9f-23fc" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Gyro Aero-Genitor" id="3c1c-e3d9-56e0-9073" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="30"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="30"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Zap" id="d185-e811-ce64-1307" hidden="false" import="true" targetId="f80b-710a-f644-57e3" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Data Strike Dropship" id="4aa9-4656-e7c9-546c" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Transport" id="0382-3363-b7a6-eafe" hidden="false" primary="true" targetId="0f65-b14b-ed9f-3e06"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Collector X" id="b7ed-fe85-2c15-e3b9" hidden="false" targetId="b33f-5617-102a-1efd" type="rule"/>
+        <infoLink name="Data Strike Dropship" id="a70b-3e72-d227-8179" hidden="false" targetId="3bf8-6980-4e10-0818" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Data Strike Dropship" id="0b6e-ab25-d7dc-677a" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Pulse" id="f4fb-b48a-012d-a5ca" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Device Dropship" id="a69c-4076-8a78-ade5" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Transport" id="e14a-23d5-d035-85a7" hidden="false" primary="true" targetId="0f65-b14b-ed9f-3e06"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Collector X" id="49c2-7375-125c-8ac6" hidden="false" targetId="b33f-5617-102a-1efd" type="rule"/>
+        <infoLink name="Device Dropship" id="b5cb-63c2-deb9-11c6" hidden="false" targetId="8872-99ba-012d-7000" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Device Dropship" id="0c64-a8f3-89c2-87f3" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Wave" id="9eb5-b35a-0c74-fd17" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Digit Light Dropship" id="f1b5-66be-69c9-f2c7" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Transport" id="efe4-8f24-83be-54e3" hidden="false" primary="true" targetId="0f65-b14b-ed9f-3e06"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Digit Light Dropship" id="4eba-022a-b4a5-b3cd" hidden="false" targetId="e71d-6501-89d9-60ec" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Digit Light Dropship" id="68cd-3446-5996-331e" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="15"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="15"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Decon Zap" id="a4b3-1771-1e69-0f8c" hidden="false" import="true" targetId="f80b-710a-f644-57e3" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Hulks" id="11fa-a845-af42-752f" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Generated" id="8ba6-fc56-8a83-6e4d" hidden="false" primary="true" targetId="9ca1-02c4-a934-51fe"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="4878-df99-3b2e-dae5" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+        <constraint id="37f5-62fa-9494-e0ad" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Hardy X" id="b825-3413-d02d-728e" hidden="false" targetId="a58f-dbcc-377c-8b12" type="rule"/>
+        <infoLink name="Puppet" id="7e2e-de29-f65c-45f1" hidden="false" targetId="ec5c-fce7-3c81-79e3" type="rule"/>
+        <infoLink name="Strong" id="17c4-7d74-39f7-fc30" hidden="false" targetId="7998-71e1-0347-ca71" type="rule"/>
+        <infoLink name="Hulks" id="1282-42c0-6d22-ef7d" hidden="false" targetId="f647-c28f-aebf-25dc" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Hulks" id="c5d4-d017-3b99-c6e9" hidden="false" import="true" type="model">
+          <costs>
+            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="30"/>
+            <cost name="category" typeId="e154-4f91-e9d9-012e" value="30"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Winnow Carbines" id="8790-4c4b-8fb4-202c" hidden="false" import="true" targetId="81e6-68da-8910-3253" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>

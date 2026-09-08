@@ -33,6 +33,18 @@
    model ancestor, so the constraint is silently disabled. Count models inside a
    unit with `scope:"self"` + `childId:"model"`.
 
+8. **Custom profile types need explicit ids.** `add()` with `typeName:"Transport"`
+   silently produces a blank `Vehicle` profile — the fix-profiles hook only knows
+   the four built-in types. Pass `typeId` **and** a `typeId` on every
+   characteristic (ids in the profile-types section below).
+
+9. **`find('id=<x>', cat)` also matches the *link* whose target is `<x>`, and can
+   return it first.** Adding to `hits[0]` then lands the child on the root
+   `selectionEntryLink`, not the shared entry. To get the shared unit entry:
+   `find('is:entry type:unit', cat, {path:'sharedSelectionEntries'}).find(u => u.name === '<Name>')`.
+   Confirm `typeof node.getCatalogue === 'function'` before passing a node to a
+   write — a row-shaped result silently no-ops `add()`/`set_field`.
+
 ## Project ids (spot-check with the fetch helper below if the .gst was rebuilt)
 
 Game system: **Dropzone Commander 3rd Edition**, `sys-1822-fb7b-9057-840f`
@@ -47,27 +59,51 @@ Category entries (in the `.gst`):
 | Heavy | `9ed0-b443-0fe4-1eaa` |
 | Transport | `0f65-b14b-ed9f-3e06` |
 | Generated | `9ca1-02c4-a934-51fe` |
+| Raw Materials | `2b55-17b3-4772-a8d4` |
 
-Cost types (in the `.gst`):
+**Cost types — two:**
 
-| cost | typeId | use |
-|---|---|---|
-| pts | `cdb2-e720-ea26-2255` | **the points value goes here** |
-| Vanguard | `ab87-75c9-cd43-9593` | always 0 |
-| Standard | `6086-6c29-a320-0fcc` | always 0 |
-| Support | `df03-77d8-4c11-2243` | always 0 |
-| Heavy | `72f6-b4d6-1f34-219e` | always 0 |
-| Transport | `4306-5775-b4a6-007d` | always 0 |
+| cost | typeId | on a unit/weapon | on RM tokens |
+|---|---|---|---|
+| `pts` | `cdb2-e720-ea26-2255` | the point value | 5 each |
+| `category` | `e154-4f91-e9d9-012e` | **equal to `pts`** | 0 / absent |
 
-Profile type names (pass the **name**, not the id, when adding a profile — the
-editor's fix-profiles hook fills in every characteristic typeId):
+`pts` drives the roster total and the per-Group 25% cap (both count `pts`, so RM
+token points count there). `category` drives the Standard/Vanguard/Heavy/Support
+allocation — RM tokens carry no `category` cost, so they stay out of the slot math.
+Every model gets **both** costs, same value. (The old per-slot cost types are gone;
+strip any zero-value leftovers.)
 
-| typeName | characteristics |
+Profile types. `typeName` + characteristic names cover the built-in columns (the
+fix-profiles hook fills the ids); pass an explicit `typeId` for `Transportation
+Requirement`, `Transport Capacity`, and the `Transport` / `RM Storage` types.
+
+| typeName / id | characteristics (`$text` char) |
 |---|---|
-| Vehicle | Type, Mv, A, DP, Special |
-| Infantry | Type, Mv, OF, DF, B, DP, Special |
-| Aircraft | Type, Mv, A, DP, Special |
-| Weapons | Name, Arc, MA, R, Att, Ac, E, Special |
+| Vehicle `f612-c788-3c14-202c` | Type, Mv, A, DP, Special, `Transportation Requirement`=`5a4b-b964-4625-7008` |
+| Infantry `60cc-a4a2-7032-d1fe` | Type, Mv, OF, DF, B, DP, Special, `Transportation Requirement`=`e5fc-7db6-74f7-3ed2` |
+| Aircraft `5340-cfb3-0c68-faef` | Type, Mv, A, DP, Special (no transport-requirement char) |
+| Weapons `7156-7401-8748-a010` | Arc, MA, R, Att, Ac, E, Special (no "Name" char — the column shows the profile's node name) |
+| **Transport** `afcc-ee02-fc67-1b92` | Type `4ba5-be04-beb3-9ee6`, Mv `c9b2-760b-2af3-7b82`, A `6523-65cf-fa99-e8d7`, DP `75a7-af03-3e2a-7c0a`, Special `3aee-eccb-7244-e36a`, `Transportation Requirement` `49fb-2da3-876e-9ae0`, `Transport Capacity` `caae-4cd1-126f-bcf8` |
+| **RM Storage** `ba7b-4507-b5b4-9ede` | RM `3626-8ef7-8d7e-22c5` |
+
+Which profile a unit gets:
+- **Normal unit** → one `Vehicle` / `Infantry` / `Aircraft` profile. Put the solid
+  transport-symbol number in its `Transportation Requirement` char.
+- **A transport unit** (hollow symbol — carries other units) → one **`Transport`**
+  profile *instead of* the Vehicle/Aircraft one. Its `Type` char text says
+  "Vehicle"/"Aircraft"; fill `Transport Capacity` (and `Transportation Requirement`
+  if it can also be carried).
+- **A Bioficer Genitor** (hollow-green RM square) → a **second** `RM Storage`
+  profile alongside its main one (`RM` = the number), **and** a `{type:"rule"}`
+  infoLink to `Genitor X` (`af76-0a2f-1a9f-23fc`) on the shared unit entry. Any
+  Bioficer unit with the hollow-green square is a Genitor.
+- **A Collector** (`Collector N` in the Special text, no green square) → a
+  `{type:"rule"}` infoLink to `Collector X` (`b33f-5617-102a-1efd`); the value
+  stays in the Special text.
+
+(Grievance Genitor Ark: `Requirement 4` on its Vehicle profile's
+`Transportation Requirement`; `RM 12` on its `RM Storage` profile; `Genitor X` rule linked.)
 
 **Fetch helper** (run in `nr_eval` to get current ids):
 
@@ -96,13 +132,12 @@ for a new unit; the **structure** is what to match.
     rules, generic names); then `{type:"profile"}` → the unit stat profile
   - `selectionEntries`: Grievance 1, Grievance 2
 - Model `2112-eaef-cbae-96bd` — `type:"model"`:
-  - `costs`: `[{name:"Vanguard",typeId:"ab87-75c9-cd43-9593",value:0},
-    {name:"Standard",typeId:"6086-6c29-a320-0fcc",value:0},
-    {name:"Support",typeId:"df03-77d8-4c11-2243",value:0},
-    {name:"Heavy",typeId:"72f6-b4d6-1f34-219e",value:0},
-    {name:"Transport",typeId:"4306-5775-b4a6-007d",value:0},
-    {name:"pts",typeId:"cdb2-e720-ea26-2255",value:35}]`
-  - `entryLinks:[{name:"Decon Staff", type:"selectionEntry", targetId:<weapon entry>, hidden:false}]`
+  - `costs`: `[{name:"pts", typeId:"cdb2-e720-ea26-2255", value:35},
+    {name:"category", typeId:"e154-4f91-e9d9-012e", value:35}]` — both, same value
+  - `entryLinks`: `{name:"Decon Staff", type:"selectionEntry", targetId:<weapon entry>, hidden:false}`;
+    plus, on an RM-capable Bioficer model, `{name:"Raw Material", type:"selectionEntry",
+    targetId:<RM upgrade>, hidden:false, constraints:[{type:"max", value:<RM capacity>,
+    field:"selections", scope:"parent", shared:false}]}` — the per-unit RM cap lives on the link
 - Weapon entry `92b8-a404-d1ee-0573` — `sharedSelectionEntries`, `type:"upgrade"`:
   - `constraints`: `min 1` and `max 1`, `field:"selections" scope:"parent"
     automatic:true shared:false`
@@ -112,7 +147,14 @@ for a new unit; the **structure** is what to match.
 - Unit stat profile `ca00-607f-b369-b766` — `sharedProfiles`, `typeName:"Vehicle"`,
   `Special` = `Puppeteer 6", Skimmer, Surveyor`
 - Weapon stat profile `2dc0-2fb6-d28b-e412` — `sharedProfiles`, `typeName:"Weapons"`,
-  chars `Name/Arc/MA/R/Att/Ac/E/Special`, `Special` = `Decon`
+  chars `Arc/MA/R/Att/Ac/E/Special`, `Special` = `Decon`
+- Transport profile `fea9-0b2a-00a7-5951` — `sharedProfiles`, `typeName:"Transport"`
+  (explicit ids, see the table above), `Requirement`=`4`, `RM`=`12`; linked on the
+  unit entry as a second `{type:"profile"}` infoLink
+- Raw Material upgrade `e218-761a-0442-82d3` — `Bioficer` `sharedSelectionEntries`,
+  `type:"upgrade"`, `costs:[{pts:5}]`, `categoryLinks:[{name:"Raw Materials",
+  primary:true, targetId:"2b55-17b3-4772-a8d4"}]`, no constraint on the entry (the
+  cap is on each model's link — see the model above)
 
 ## Add-order recipe (one nr_eval per group, or batch carefully)
 
@@ -141,10 +183,21 @@ for a new unit; the **structure** is what to match.
 - **Weapon = `upgrade` entry, not a bare profile.** A profile can't carry rule
   links; wrapping it in an entry lets stats + rules travel together, and gives a
   home for points/constraints if a weapon later becomes optional.
-- **One `pts` cost + a category for the slot.** Single source of truth for cost.
-  The list-legality logic (total ≤ game size; Vanguard/Heavy/Support points ≤
-  Standard points) reads `pts` filtered by category on the game system's
-  "Configuration" force entry — that's a separate build, not part of this skill.
+- **`pts` + `category` cost.** `pts` = real cost (roster total, per-Group 25% cap).
+  `category` = same value, used only for the slot allocation, so RM tokens (no
+  `category` cost) don't count against a slot. Slot itself = the unit's category.
+- **List legality** (a build separate from this skill, in progress on the game
+  system's `Configuration` force): `max 25% limit::pts` on the `Group` child force
+  **works**; per-slot `max category` constraints on `Configuration` raised +1 per
+  point of Standard `category` are in place but **not yet roster-tested**. Game
+  size / Group-cap is **not built** — the first attempt soft-locked the builder and
+  was reverted; it needs a mechanism that surfaces options into a catalogue-less
+  top force, built one constraint at a time.
+- **RM tokens (Bioficer).** A shared `Raw Material` upgrade (5 pts, category
+  `Raw Materials`) linked onto each RM-capable model, with the per-unit cap
+  (`max 12` for the Ark) on the link. `Raw Materials` is its own category so its
+  points can be kept out of the slot allocation. The RM storage number also shows
+  on the unit's `Transport` profile (`RM` characteristic) for reference.
 - **Generic rule links + specific `Special` text.** `Puppeteer X"` / `Ineffective: X`
   stays generic so one rule covers every value; the resolved value
   (`Puppeteer 6"`, `Ineffective: Zones`) lives in the profile's `Special` string,
