@@ -444,10 +444,6 @@
       <categoryLinks>
         <categoryLink name="Generated" id="ab59-59a8-cf62-cfcb" primary="true" targetId="de22-82b2-a95d-a9b0"/>
       </categoryLinks>
-      <constraints>
-        <constraint id="06db-6e4b-7317-f67e" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
-        <constraint id="c2b9-9284-a828-46f4" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="3"/>
-      </constraints>
       <costs>
         <cost name="points" typeId="ab87-75c9-cd43-9593" value="0"/>
       </costs>
@@ -455,41 +451,45 @@
         <infoLink name="Drone" id="b880-36dd-54a8-7a1a" hidden="false" targetId="2f46-1b95-5a8a-eff1" type="profile"/>
         <infoLink name="Puppet" id="c886-7967-09d0-9697" hidden="false" targetId="ec5c-fce7-3c81-79e3" type="rule"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Drones" id="2e66-2993-ca91-be65" hidden="false" import="true" type="model">
-          <categoryLinks>
-            <categoryLink name="Generated" id="d9bd-3716-3c45-124d" primary="true" targetId="de22-82b2-a95d-a9b0"/>
-          </categoryLinks>
-          <costs>
-            <cost name="points" typeId="ab87-75c9-cd43-9593" value="0"/>
-            <cost name="Standard" typeId="6086-6c29-a320-0fcc" value="0"/>
-            <cost name="Support" typeId="df03-77d8-4c11-2243" value="0"/>
-            <cost name="Heavy" typeId="72f6-b4d6-1f34-219e" value="0"/>
-            <cost name="Transport" typeId="4306-5775-b4a6-007d" value="0"/>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Decon Rifles" id="365e-7c70-eb25-c5b0" hidden="false" targetId="112d-3627-e6de-45d3" type="profile">
-              <modifiers>
-                <modifier field="hidden" type="set" value="false">
-                  <conditions>
-                    <condition childId="any" field="selections" includeChildSelections="false" scope="parent" shared="true" type="always" value="1"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="97aa-86b8-374c-7b83" hidden="false">
+          <constraints>
+            <constraint id="5e11-572a-8eaa-6b75" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+            <constraint id="fc8b-3cc1-18af-7b24" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="3"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Drones" id="349d-e961-cc7b-d7e8" hidden="false" import="true" type="model">
+              <categoryLinks>
+                <categoryLink name="Generated" id="8e7a-2f79-8206-d3ff" hidden="false" primary="true" targetId="de22-82b2-a95d-a9b0"/>
+              </categoryLinks>
+              <costs>
+                <cost name="points" typeId="ab87-75c9-cd43-9593" value="0"/>
+                <cost name="Standard" typeId="6086-6c29-a320-0fcc" value="0"/>
+                <cost name="Support" typeId="df03-77d8-4c11-2243" value="0"/>
+                <cost name="Heavy" typeId="72f6-b4d6-1f34-219e" value="0"/>
+                <cost name="Transport" typeId="4306-5775-b4a6-007d" value="0"/>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Decon Rifles" id="16f8-f9b4-319d-d7f3" hidden="false" targetId="112d-3627-e6de-45d3" type="profile">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="false">
+                      <conditions>
+                        <condition childId="any" field="selections" includeChildSelections="false" scope="parent" shared="true" type="always" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Grievance Genitor Ark" id="02e6-3319-e3d7-68c4" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Standard" id="129a-b5c8-763b-e85b" hidden="false" primary="true" targetId="c926-5116-6500-dd46"/>
       </categoryLinks>
-      <constraints>
-        <constraint id="533c-aa23-6975-fed4" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
-        <constraint id="10d6-99f3-3c1c-817b" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
-      </constraints>
       <infoLinks>
         <infoLink name="Skimmer" id="3023-d3bd-89ef-770e" hidden="false" targetId="dd00-22e6-fa1d-0c38" type="rule"/>
         <infoLink name="Surveyor" id="2f8e-510e-9993-20e6" hidden="false" targetId="2057-158a-d752-4b5e" type="rule"/>
@@ -498,36 +498,44 @@
         <infoLink name="Grievance Genitor Ark" id="ca55-6ae4-0352-d632" hidden="false" targetId="fea9-0b2a-00a7-5951" type="profile"/>
         <infoLink name="Genitor X" id="3956-2262-90ff-7ea2" hidden="false" targetId="af76-0a2f-1a9f-23fc" type="rule"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Grievance 1" id="2112-eaef-cbae-96bd" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="35"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="35"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Staff" id="19d7-feb9-1651-7635" hidden="false" import="true" targetId="92b8-a404-d1ee-0573" type="selectionEntry"/>
-            <entryLink name="Raw Material" id="42aa-c374-a63c-2427" hidden="false" import="true" targetId="e218-761a-0442-82d3" type="selectionEntry">
-              <constraints>
-                <constraint id="e2ba-2e93-9ced-37c8" field="selections" scope="parent" shared="false" type="max" value="12"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Grievance 2" id="4eb4-9048-1a3a-51cb" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="40"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="40"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Electro-Bombard" id="b0de-c9ff-f82b-d061" hidden="false" import="true" targetId="65ff-f12f-cb80-acb7" type="selectionEntry"/>
-            <entryLink name="Raw Material" id="72da-33d5-9eca-900a" hidden="false" import="true" targetId="e218-761a-0442-82d3" type="selectionEntry">
-              <constraints>
-                <constraint id="0939-d1d3-25d1-44cd" field="selections" scope="parent" shared="false" type="max" value="12"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="4101-580b-744c-7b65" hidden="false">
+          <constraints>
+            <constraint id="20b9-b4c0-631f-adec" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+            <constraint id="09bf-8e3b-ae5f-406c" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Grievance 1" id="1d67-b53f-d251-e0b4" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="35"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="35"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Staff" id="a377-187c-3d88-9f56" hidden="false" import="true" targetId="92b8-a404-d1ee-0573" type="selectionEntry"/>
+                <entryLink name="Raw Material" id="b57f-c372-c8ce-605a" hidden="false" import="true" targetId="e218-761a-0442-82d3" type="selectionEntry">
+                  <constraints>
+                    <constraint id="ce20-b5e1-5d40-0711" field="selections" scope="parent" shared="false" type="max" value="12"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Grievance 2" id="86cd-486b-1eed-ab94" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="40"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="40"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Electro-Bombard" id="9424-22a2-a58e-8553" hidden="false" import="true" targetId="65ff-f12f-cb80-acb7" type="selectionEntry"/>
+                <entryLink name="Raw Material" id="6340-7d96-c122-1555" hidden="false" import="true" targetId="e218-761a-0442-82d3" type="selectionEntry">
+                  <constraints>
+                    <constraint id="2538-0b84-b4ef-5169" field="selections" scope="parent" shared="false" type="max" value="12"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Decon Staff" id="92b8-a404-d1ee-0573" hidden="false" import="true" type="upgrade">
       <constraints>
@@ -684,101 +692,109 @@
       <categoryLinks>
         <categoryLink name="Standard" id="b82e-033d-e882-c34a" hidden="false" primary="true" targetId="c926-5116-6500-dd46"/>
       </categoryLinks>
-      <constraints>
-        <constraint id="5c2a-e37a-a816-72f8" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
-        <constraint id="d801-94d1-9031-e3bd" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="8"/>
-      </constraints>
       <infoLinks>
         <infoLink name="Ev X (Evasion)" id="a645-c150-f48a-c77a" hidden="false" targetId="bec3-20fe-557b-33cd" type="rule"/>
         <infoLink name="Skimmer" id="1747-207d-875d-5db4" hidden="false" targetId="dd00-22e6-fa1d-0c38" type="rule"/>
         <infoLink name="Thorn Light Skimmer" id="f0cf-ba3b-b557-6049" hidden="false" targetId="d994-3399-5cdb-e87c" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Thorn 1" id="bd7e-558b-09cc-e44d" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Stave" id="c295-5306-01f3-9ba7" hidden="false" import="true" targetId="f350-9a42-cd6f-c67c" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Thorn 2" id="dc5b-e9fe-21be-a3f9" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Lightmaw" id="0352-b2f7-c6dc-8e36" hidden="false" import="true" targetId="86be-616b-f371-4de4" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Thorn 3" id="18b8-b0d4-180d-07f5" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Ghost Circuit, wide" id="721a-6c71-65dd-b7c2" hidden="false" import="true" targetId="06b3-6658-05d2-3511" type="selectionEntry"/>
-            <entryLink name="Ghost Circuit, narrow" id="30de-0bea-850b-a25f" hidden="false" import="true" targetId="c02e-065b-4360-13fa" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="9485-6260-3312-ace6" hidden="false">
+          <constraints>
+            <constraint id="c26a-7c9b-09be-6b42" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+            <constraint id="8c39-83bc-1551-86d3" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="8"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Thorn 1" id="604e-105f-1a24-8c5d" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Stave" id="a209-9c78-06f0-4f3b" hidden="false" import="true" targetId="f350-9a42-cd6f-c67c" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Thorn 2" id="9d4d-86b8-4202-bcc9" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Lightmaw" id="7e12-eaf3-799d-d1d2" hidden="false" import="true" targetId="86be-616b-f371-4de4" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Thorn 3" id="fe2c-112d-19ff-8639" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Ghost Circuit, wide" id="4031-7ee8-5b7e-5f0a" hidden="false" import="true" targetId="06b3-6658-05d2-3511" type="selectionEntry"/>
+                <entryLink name="Ghost Circuit, narrow" id="65bd-9529-af2e-3833" hidden="false" import="true" targetId="c02e-065b-4360-13fa" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Surge Gunship" id="f757-1ebf-b413-ce59" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Support" id="1d38-863b-dba3-e341" hidden="false" primary="true" targetId="d6a2-4ad7-4694-03ce"/>
       </categoryLinks>
-      <constraints>
-        <constraint id="bdbb-f449-ae9d-e40f" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
-        <constraint id="4516-2fc3-fcbf-b81b" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
-      </constraints>
       <infoLinks>
         <infoLink name="Ev X (Evasion)" id="9792-ccff-af15-a0f0" hidden="false" targetId="bec3-20fe-557b-33cd" type="rule"/>
         <infoLink name="Surge Gunship" id="080e-0d42-a7be-2ce0" hidden="false" targetId="38a3-506e-6225-021d" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Surge 1" id="3512-a857-436c-3f7a" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="55"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="55"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Pulse" id="accf-8fd6-14ca-1546" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
-            <entryLink name="Decon Cannon Pair" id="aaa8-1d0d-4326-3f95" hidden="false" import="true" targetId="9ec5-da60-a087-4c87" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Surge 2" id="5830-84b0-754f-0a98" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="55"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="55"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Pulse" id="f3f1-a2c0-94f0-b2ac" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
-            <entryLink name="Twin Scythes Pair" id="3f27-490d-0982-b0e3" hidden="false" import="true" targetId="f93b-c62b-9cf3-7859" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Surge 3" id="0d87-a7ba-6dca-b937" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="55"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="55"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Pulse" id="a537-1593-1c2f-d250" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
-            <entryLink name="Heavy Lightmaw Pair" id="11c7-a841-88f8-b847" hidden="false" import="true" targetId="9450-3d62-be2e-6033" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Surge 4" id="af8a-a615-7d4a-b7c5" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="60"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="60"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Pulse" id="0e2f-87f7-6403-8b35" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
-            <entryLink name="Ghost Orbit Pair, wide" id="fc57-d157-2602-7ff9" hidden="false" import="true" targetId="96e5-79c3-5699-f982" type="selectionEntry"/>
-            <entryLink name="Ghost Orbit Pair, narrow" id="8a5e-5c10-727b-e99d" hidden="false" import="true" targetId="c62b-267f-b9a6-7f0d" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="f847-b1a4-1ce9-1734" hidden="false">
+          <constraints>
+            <constraint id="2b3e-9c6d-1f09-03b0" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+            <constraint id="1290-0bcf-ee9b-cb0b" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Surge 1" id="3b47-5d56-e019-f6ec" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="55"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="55"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Pulse" id="a166-71aa-2839-bcd7" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
+                <entryLink name="Decon Cannon Pair" id="50ca-790a-1ac1-8ca8" hidden="false" import="true" targetId="9ec5-da60-a087-4c87" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Surge 2" id="2d2f-de67-1fe0-9d61" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="55"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="55"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Pulse" id="c0f5-98c1-6def-99d8" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
+                <entryLink name="Twin Scythes Pair" id="3b1b-a7d2-0842-4663" hidden="false" import="true" targetId="f93b-c62b-9cf3-7859" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Surge 3" id="5b19-3bec-1800-eb38" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="55"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="55"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Pulse" id="9d9c-3117-f2e2-42f7" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
+                <entryLink name="Heavy Lightmaw Pair" id="5cd8-8dea-fffc-cebc" hidden="false" import="true" targetId="9450-3d62-be2e-6033" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Surge 4" id="1905-7c7f-54ac-dadb" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="60"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="60"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Pulse" id="c337-c7aa-ab19-91be" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
+                <entryLink name="Ghost Orbit Pair, wide" id="076e-7dde-c0bc-ef17" hidden="false" import="true" targetId="96e5-79c3-5699-f982" type="selectionEntry"/>
+                <entryLink name="Ghost Orbit Pair, narrow" id="f458-b05e-0ddb-22de" hidden="false" import="true" targetId="c62b-267f-b9a6-7f0d" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Twin Barb Destructor" id="3f4c-eb47-0b6f-54f2" hidden="false" import="true" type="upgrade">
       <constraints>
@@ -888,170 +904,186 @@
       <categoryLinks>
         <categoryLink name="Standard" id="7726-f096-4428-f071" hidden="false" primary="true" targetId="c926-5116-6500-dd46"/>
       </categoryLinks>
-      <constraints>
-        <constraint id="3233-2610-347b-69a5" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
-        <constraint id="1fa8-a280-4cb2-fd2b" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="4"/>
-      </constraints>
       <infoLinks>
         <infoLink name="Ev X (Evasion)" id="f942-0c62-3937-5800" hidden="false" targetId="bec3-20fe-557b-33cd" type="rule"/>
         <infoLink name="Skimmer" id="1c85-de7f-72fb-16ef" hidden="false" targetId="dd00-22e6-fa1d-0c38" type="rule"/>
         <infoLink name="Tusk Main Battle Skimmer" id="8685-95c5-6cc1-1cd1" hidden="false" targetId="fe3f-0c59-bb62-08d4" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Tusk 1" id="36e9-57c3-ab9f-5691" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Twin Barb Destructor" id="3223-f80e-ed6d-30f8" hidden="false" import="true" targetId="3f4c-eb47-0b6f-54f2" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Tusk 2" id="dadc-7704-9f43-2532" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Bisection Organ" id="e676-1c87-e4f3-b5eb" hidden="false" import="true" targetId="28d4-803c-0216-3b40" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Tusk 3" id="e287-4ce0-e66e-ae92" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="50"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="50"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Scythe Battery" id="24ee-a199-bc52-b22b" hidden="false" import="true" targetId="26cb-0256-9962-93c8" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="bf72-0ec3-ff67-695d" hidden="false">
+          <constraints>
+            <constraint id="2d1f-523e-06c2-ca2d" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+            <constraint id="6a08-7a05-6e5f-dbd4" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="4"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Tusk 1" id="477b-5cef-06eb-84e1" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Twin Barb Destructor" id="5300-1602-89cd-0721" hidden="false" import="true" targetId="3f4c-eb47-0b6f-54f2" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Tusk 2" id="3620-fdf2-1774-9681" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Bisection Organ" id="8b87-6dbc-4e11-0724" hidden="false" import="true" targetId="28d4-803c-0216-3b40" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Tusk 3" id="65ca-95a7-4fea-c2a9" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="50"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="50"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Scythe Battery" id="30be-3869-c2b2-34b7" hidden="false" import="true" targetId="26cb-0256-9962-93c8" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Tangent Support Skimmer" id="69f1-4300-1040-f336" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Support" id="92d8-28d2-8737-301c" hidden="false" primary="true" targetId="d6a2-4ad7-4694-03ce"/>
       </categoryLinks>
-      <constraints>
-        <constraint id="8dbe-3ff4-f9b1-7d34" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
-        <constraint id="c2ee-6a3a-ff08-3cc5" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="4"/>
-      </constraints>
       <infoLinks>
         <infoLink name="Ev X (Evasion)" id="aed4-1d1d-7657-8aa2" hidden="false" targetId="bec3-20fe-557b-33cd" type="rule"/>
         <infoLink name="Skimmer" id="546f-8110-1aca-8bd0" hidden="false" targetId="dd00-22e6-fa1d-0c38" type="rule"/>
         <infoLink name="Tangent Support Skimmer" id="c008-d7da-3aa5-278b" hidden="false" targetId="a3fc-8bd3-1eb4-7f6a" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Tangent 1" id="7e44-9b61-c589-18a0" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Winnow Web" id="0621-0167-874f-aa8e" hidden="false" import="true" targetId="8462-54d2-9787-72db" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Tangent 2" id="9134-4406-a9da-150d" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Barb Spitter" id="8a82-19a3-4139-92af" hidden="false" import="true" targetId="2931-d8ea-1709-6367" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Tangent 3" id="400c-a100-d340-e21d" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Quake Howitzer" id="e622-5023-addb-88ab" hidden="false" import="true" targetId="e34b-8034-cbae-7ec9" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="044c-8d71-dd83-2f8c" hidden="false">
+          <constraints>
+            <constraint id="ffdd-b8b1-c9f9-f9b0" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+            <constraint id="6352-4797-a8cf-e00e" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="4"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Tangent 1" id="b3bd-ee61-aaf7-b2dc" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Winnow Web" id="94f7-99c0-3946-f600" hidden="false" import="true" targetId="8462-54d2-9787-72db" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Tangent 2" id="734d-23c7-ea0d-73ad" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Barb Spitter" id="8d43-974f-46bc-9291" hidden="false" import="true" targetId="2931-d8ea-1709-6367" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Tangent 3" id="55f1-0f1a-98f8-705e" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Quake Howitzer" id="8a51-fc14-bcbe-78e7" hidden="false" import="true" targetId="e34b-8034-cbae-7ec9" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Silence Heavy Gunship" id="e202-e092-8045-e83a" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Heavy" id="3824-32fa-b3e9-c4c9" hidden="false" primary="true" targetId="9ed0-b443-0fe4-1eaa"/>
       </categoryLinks>
-      <constraints>
-        <constraint id="4a81-a97d-d236-aedf" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
-        <constraint id="401f-9688-8562-492b" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="1"/>
-      </constraints>
       <infoLinks>
         <infoLink name="Collector X" id="3f81-cadf-ca85-bec3" hidden="false" targetId="b33f-5617-102a-1efd" type="rule"/>
         <infoLink name="Silence Heavy Gunship" id="c592-7c1e-1b21-30db" hidden="false" targetId="8dfb-7f9d-2d97-3b91" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Silence 1" id="3c12-ece6-6b6f-8fd2" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="85"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="85"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Wave" id="ede8-3028-d4df-a0f3" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
-            <entryLink name="Decon Cannon Pair" id="a578-33f3-b10f-0629" hidden="false" import="true" targetId="9ec5-da60-a087-4c87" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Silence 2" id="868f-51ef-6e23-ec4f" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="85"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="85"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Wave" id="799f-a0dc-1858-25a5" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
-            <entryLink name="Twin Scythes Pair" id="234c-f7fa-94da-9c34" hidden="false" import="true" targetId="f93b-c62b-9cf3-7859" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Silence 3" id="fcec-b791-cf81-98bb" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="85"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="85"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Wave" id="4080-c1ee-3bf4-520c" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
-            <entryLink name="Heavy Lightmaw Pair" id="945e-f877-1053-212a" hidden="false" import="true" targetId="9450-3d62-be2e-6033" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Silence 4" id="a26f-c0a4-6993-f7b1" hidden="false" import="true" type="model">
-          <comment>Rare</comment>
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="90"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="90"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Wave" id="4429-5d81-dc8a-84fd" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
-            <entryLink name="Ghost Orbit Pair, wide" id="383f-6af5-a068-2220" hidden="false" import="true" targetId="96e5-79c3-5699-f982" type="selectionEntry"/>
-            <entryLink name="Ghost Orbit Pair, narrow" id="d280-aa4b-28e1-c169" hidden="false" import="true" targetId="c62b-267f-b9a6-7f0d" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="77b4-4927-2ec3-4972" hidden="false">
+          <constraints>
+            <constraint id="7a7c-f628-2738-0d31" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+            <constraint id="4eeb-b06b-6d87-3cdf" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Silence 1" id="31f0-e05c-fd33-09c9" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="85"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="85"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Wave" id="884a-3674-9dda-f344" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
+                <entryLink name="Decon Cannon Pair" id="3502-6104-ffe3-4177" hidden="false" import="true" targetId="9ec5-da60-a087-4c87" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Silence 2" id="6868-df5f-37a9-7bb1" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="85"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="85"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Wave" id="37d6-fabf-d4ba-4d4e" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
+                <entryLink name="Twin Scythes Pair" id="d8e3-e7ef-cf9b-0531" hidden="false" import="true" targetId="f93b-c62b-9cf3-7859" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Silence 3" id="d617-7a2a-3f4e-b516" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="85"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="85"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Wave" id="f9c6-c716-e118-010f" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
+                <entryLink name="Heavy Lightmaw Pair" id="ad06-2591-ca27-cf43" hidden="false" import="true" targetId="9450-3d62-be2e-6033" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry name="Silence 4" id="12e0-ea1e-2cd5-55b9" hidden="false" import="true" type="model">
+              <comment>Rare</comment>
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="90"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="90"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Wave" id="a813-bbc1-e7c9-3536" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
+                <entryLink name="Ghost Orbit Pair, wide" id="eca2-9390-1c67-78d2" hidden="false" import="true" targetId="96e5-79c3-5699-f982" type="selectionEntry"/>
+                <entryLink name="Ghost Orbit Pair, narrow" id="8c4d-3fc8-d1a8-6786" hidden="false" import="true" targetId="c62b-267f-b9a6-7f0d" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Gyro Aero-Genitor" id="af27-12fb-05ed-478c" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Vanguard" id="b2c0-08d0-9ea4-db21" hidden="false" primary="true" targetId="74de-7c05-a61e-25e8"/>
       </categoryLinks>
-      <constraints>
-        <constraint id="f3bf-c585-36b0-8784" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
-        <constraint id="a676-3e47-1bf0-5de6" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
-      </constraints>
       <infoLinks>
         <infoLink name="Puppeteer X&quot;" id="bb33-79f5-fc0a-c3d2" hidden="false" targetId="3944-de91-43fa-e9c1" type="rule"/>
         <infoLink name="Gyro Aero-Genitor" id="a86a-b4a8-806b-1e4a" hidden="false" targetId="8b6f-2387-3564-85f8" type="profile"/>
         <infoLink name="Gyro Aero-Genitor" id="ecd2-25c5-4f2f-8066" hidden="false" targetId="0c4e-d819-a113-7749" type="profile"/>
         <infoLink name="Genitor X" id="ac46-1c6f-aa5e-6712" hidden="false" targetId="af76-0a2f-1a9f-23fc" type="rule"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Gyro Aero-Genitor" id="3c1c-e3d9-56e0-9073" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="30"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="30"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Zap" id="d185-e811-ce64-1307" hidden="false" import="true" targetId="f80b-710a-f644-57e3" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="093a-90f0-420d-40b8" hidden="false">
+          <constraints>
+            <constraint id="a394-b21a-3f76-286e" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+            <constraint id="2ab4-be12-1a4f-b1d1" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Gyro Aero-Genitor" id="bf9f-f427-04ea-455a" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="30"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="30"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Zap" id="513a-3ab2-9747-af0e" hidden="false" import="true" targetId="f80b-710a-f644-57e3" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Data Strike Dropship" id="4aa9-4656-e7c9-546c" hidden="false" import="true" type="unit">
       <categoryLinks>
@@ -1061,17 +1093,25 @@
         <infoLink name="Collector X" id="b7ed-fe85-2c15-e3b9" hidden="false" targetId="b33f-5617-102a-1efd" type="rule"/>
         <infoLink name="Data Strike Dropship" id="a70b-3e72-d227-8179" hidden="false" targetId="3bf8-6980-4e10-0818" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Data Strike Dropship" id="0b6e-ab25-d7dc-677a" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Pulse" id="f4fb-b48a-012d-a5ca" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="0cd6-bcfd-2b86-2bfc" hidden="false">
+          <constraints>
+            <constraint id="72d5-749f-ef51-e5fb" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+            <constraint id="7d65-5b44-f755-3606" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Data Strike Dropship" id="a4b1-f22b-f195-26d6" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="25"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="25"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Pulse" id="39f3-c6df-abbe-5069" hidden="false" import="true" targetId="d2e6-caf3-d151-d2de" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Device Dropship" id="a69c-4076-8a78-ade5" hidden="false" import="true" type="unit">
       <categoryLinks>
@@ -1081,17 +1121,25 @@
         <infoLink name="Collector X" id="49c2-7375-125c-8ac6" hidden="false" targetId="b33f-5617-102a-1efd" type="rule"/>
         <infoLink name="Device Dropship" id="b5cb-63c2-deb9-11c6" hidden="false" targetId="8872-99ba-012d-7000" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Device Dropship" id="0c64-a8f3-89c2-87f3" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Wave" id="9eb5-b35a-0c74-fd17" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="3caf-fa0e-8027-2385" hidden="false">
+          <constraints>
+            <constraint id="b06a-d7fd-8e0b-4017" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+            <constraint id="accc-d7d9-92ba-4762" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Device Dropship" id="3496-8f9a-5c30-b0fe" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="45"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="45"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Wave" id="02e0-6e78-69d8-cdee" hidden="false" import="true" targetId="e71c-fb8f-1f4d-f48b" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Digit Light Dropship" id="f1b5-66be-69c9-f2c7" hidden="false" import="true" type="unit">
       <categoryLinks>
@@ -1100,43 +1148,55 @@
       <infoLinks>
         <infoLink name="Digit Light Dropship" id="4eba-022a-b4a5-b3cd" hidden="false" targetId="e71d-6501-89d9-60ec" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Digit Light Dropship" id="68cd-3446-5996-331e" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="15"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="15"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Decon Zap" id="a4b3-1771-1e69-0f8c" hidden="false" import="true" targetId="f80b-710a-f644-57e3" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="454c-5438-e057-aa6c" hidden="false">
+          <constraints>
+            <constraint id="68a0-99c3-8595-3b06" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+            <constraint id="2358-42ec-8ed1-159a" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Digit Light Dropship" id="95f8-c3c7-6b16-bc09" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="15"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="15"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Decon Zap" id="18bb-9cef-4aba-7db3" hidden="false" import="true" targetId="f80b-710a-f644-57e3" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Hulks" id="11fa-a845-af42-752f" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Generated" id="8ba6-fc56-8a83-6e4d" hidden="false" primary="true" targetId="9ca1-02c4-a934-51fe"/>
       </categoryLinks>
-      <constraints>
-        <constraint id="4878-df99-3b2e-dae5" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
-        <constraint id="37f5-62fa-9494-e0ad" childId="model" field="selections" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
-      </constraints>
       <infoLinks>
         <infoLink name="Hardy X" id="b825-3413-d02d-728e" hidden="false" targetId="a58f-dbcc-377c-8b12" type="rule"/>
         <infoLink name="Puppet" id="7e2e-de29-f65c-45f1" hidden="false" targetId="ec5c-fce7-3c81-79e3" type="rule"/>
         <infoLink name="Strong" id="17c4-7d74-39f7-fc30" hidden="false" targetId="7998-71e1-0347-ca71" type="rule"/>
         <infoLink name="Hulks" id="1282-42c0-6d22-ef7d" hidden="false" targetId="f647-c28f-aebf-25dc" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Hulks" id="c5d4-d017-3b99-c6e9" hidden="false" import="true" type="model">
-          <costs>
-            <cost name="pts" typeId="cdb2-e720-ea26-2255" value="30"/>
-            <cost name="category" typeId="e154-4f91-e9d9-012e" value="30"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Winnow Carbines" id="8790-4c4b-8fb4-202c" hidden="false" import="true" targetId="81e6-68da-8910-3253" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Models" id="97f2-67e3-a2ab-373b" hidden="false">
+          <constraints>
+            <constraint id="1d5d-f8ae-c53c-b157" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+            <constraint id="61ce-857c-f9f6-9737" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Hulks" id="f451-8c0b-dbb7-d25c" hidden="false" import="true" type="model">
+              <costs>
+                <cost name="pts" typeId="cdb2-e720-ea26-2255" value="30"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="30"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Winnow Carbines" id="9a7e-a4ae-063c-d546" hidden="false" import="true" targetId="81e6-68da-8910-3253" type="selectionEntry"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>

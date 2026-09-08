@@ -132,20 +132,30 @@ weapon appears. A bare `profile` node cannot hold rule links — that's why the 
 
 - `categoryLinks`: `[{name:<slot>, primary:true, targetId:<slot category id>}]` — the
   slot lives here, on the shared entry, **not** on the root link.
-- `constraints`: squad size. `field:"selections"`, `scope:"self"`, `childId:"model"`,
-  `includeChildSelections:true`. `min`/`max` = the squad-size range (equal if fixed).
-  **Not** `scope:"model"` — on a unit that walks up to no model and silently does nothing.
-  A **Transport-category** unit (Squad Size "N/A") gets **no** squad constraint.
-  A **Generated** unit (Drones, Hulks) can't be bought in a list — it exists only
-  for in-game spawning; leave its build-time restriction to the list-rules layer,
-  don't invent one here.
+- **No `constraints` on the unit entry itself.** A `min` constraint on a
+  category-linked unit entry reads as "this force must contain N of this unit" and
+  makes the builder auto-populate every slot with errored entries the moment a
+  Group is added. Squad size goes on a nested group instead (see below).
 - `infoLinks`: one `type:"rule"` link per unit special rule (generic names,
   targeting the game-system shared rules) + **one** `type:"profile"` link → the
   unit stat profile.
-- `selectionEntries`: the models (3e).
+- `selectionEntryGroups`: exactly one, `name:"Models"`, `hidden:false`, holding
+  **all** the model entries (3e) and carrying the squad-size constraints:
+  `field:"selections"`, `scope:"self"`, `childId:"model"`,
+  `includeChildSelections:true`, `shared:false` — one `type:"min"`, one `type:"max"`
+  (equal if the squad is a fixed size). **Not** `scope:"model"` (walks up to no
+  model, silently does nothing). This keeps the unit empty with a `+` until the
+  user adds it, then enforces the range once models go in.
+  - A **Transport-category** unit (Squad Size "N/A") still gets the `Models` group,
+    with `min 1 / max 1`.
+  - A **Generated** unit (Drones, Hulks) can't be bought in a list — it exists only
+    for in-game spawning; its `Models` group still gets the card's squad range, but
+    the real build-time block belongs to the list-rules layer, not here.
 
-### 3e. Models — one `type: "model"` entry per loadout
+### 3e. Models — one `type: "model"` entry per loadout, inside the `Models` group
 
+- The model entries live in the unit's `selectionEntryGroups[0]` ("Models"), not
+  directly on the unit entry.
 - `name` = the loadout tag from the weapon rows (`Grievance 1`, `Thorn 3`). A
   unit with a single fixed loadout still gets one model entry, named after the unit.
 - A weapon row with **no** `(tag)` = every variant carries it → link it on every model.

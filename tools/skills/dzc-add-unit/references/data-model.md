@@ -30,8 +30,9 @@
    is `min N` + `max N`.
 
 7. **Scope `model` on a unit resolves to nothing.** Scopes walk *up*; a unit has no
-   model ancestor, so the constraint is silently disabled. Count models inside a
-   unit with `scope:"self"` + `childId:"model"`.
+   model ancestor, so the constraint is silently disabled. Count models with
+   `scope:"self"` + `childId:"model"` from the `Models` group (not the unit — see
+   pitfall #10).
 
 8. **Custom profile types need explicit ids.** `add()` with `typeName:"Transport"`
    silently produces a blank `Vehicle` profile — the fix-profiles hook only knows
@@ -44,6 +45,14 @@
    `find('is:entry type:unit', cat, {path:'sharedSelectionEntries'}).find(u => u.name === '<Name>')`.
    Confirm `typeof node.getCatalogue === 'function'` before passing a node to a
    write — a row-shaped result silently no-ops `add()`/`set_field`.
+
+10. **Never put a squad `min` constraint on the unit `selectionEntry`.** A unit
+    entry is category-linked into a force, so a `min` on it reads as "this force
+    must contain N of this unit" and the builder auto-adds N errored copies into
+    every slot the moment a Group is added (they should stay empty with a `+`).
+    Put both squad constraints on a nested `selectionEntryGroup` named "Models"
+    that holds the model entries — it only fires once the user picks the unit.
+    Applied to every Bioficer unit; the `dzc-add-unit` build does this by default.
 
 ## Project ids (spot-check with the fetch helper below if the .gst was rebuilt)
 
@@ -125,12 +134,13 @@ for a new unit; the **structure** is what to match.
   `{name:"Grievance Genitor Ark", type:"selectionEntry", targetId:<unit entry>, hidden:false}`
 - Unit entry `02e6-3319-e3d7-68c4` — `sharedSelectionEntries`, `type:"unit"`:
   - `categoryLinks:[{name:"Standard", primary:true, targetId:"c926-5116-6500-dd46"}]`
-  - `constraints`: two, `field:"selections" scope:"self" childId:"model"
-    includeChildSelections:true includeChildForces:true shared:false`, one
-    `type:"min" value:1`, one `type:"max" value:2`
+  - **no `constraints`** on the unit entry (see pitfall #10)
   - `infoLinks`: `{type:"rule"}` → Skimmer, Surveyor, Puppeteer X" (game-system
     rules, generic names); then `{type:"profile"}` → the unit stat profile
-  - `selectionEntries`: Grievance 1, Grievance 2
+  - `selectionEntryGroups`: one, `name:"Models" hidden:false`, with
+    `constraints`: two, `field:"selections" scope:"self" childId:"model"
+    includeChildSelections:true shared:false`, one `type:"min" value:1`, one
+    `type:"max" value:2`; and `selectionEntries`: Grievance 1, Grievance 2
 - Model `2112-eaef-cbae-96bd` — `type:"model"`:
   - `costs`: `[{name:"pts", typeId:"cdb2-e720-ea26-2255", value:35},
     {name:"category", typeId:"e154-4f91-e9d9-012e", value:35}]` — both, same value
@@ -166,8 +176,11 @@ for a new unit; the **structure** is what to match.
                            (infoLinks target profile ids from 2, rule ids from
                             gst.sharedRules + step 3; read ids off returned nodes)
 5. unit entry + models  -> add(unitData, 'sharedSelectionEntries', factionCat)
-                           (model entryLinks target weapon entry ids from 4;
-                            unit infoLinks target rule ids + profile id from 1)
+                           (unit has NO constraints; models sit in
+                            selectionEntryGroups:[{name:"Models", constraints:[min,max],
+                            selectionEntries:[...]}]; model entryLinks target weapon
+                            entry ids from 4; unit infoLinks target rule ids + profile
+                            id from 1)
 6. root entry link      -> add(linkData, 'entryLinks', factionCat)
 ```
 
@@ -180,6 +193,10 @@ for a new unit; the **structure** is what to match.
   shared entry so a second link elsewhere inherits it all.
 - **Stats in `sharedProfiles`, linked everywhere.** One place to change a number in
   a balance pass.
+- **Squad size on a nested `Models` group, never the unit entry.** A `min` on the
+  category-linked unit entry makes the builder auto-fill every slot with errored
+  copies when a Group is added; the group-level constraint only fires once the unit
+  is actually picked, so slots stay empty with a `+` (pitfall #10).
 - **Weapon = `upgrade` entry, not a bare profile.** A profile can't carry rule
   links; wrapping it in an entry lets stats + rules travel together, and gives a
   home for points/constraints if a weapon later becomes optional.
