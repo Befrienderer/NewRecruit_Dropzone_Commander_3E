@@ -218,8 +218,9 @@ for a new unit; the **structure** is what to match.
   Skirmish / Clash / Battle / Reconquest — the player picks one. Each: `max 1`
   `field:forces scope:roster`; a `max N` `field:forces scope:self` Group cap; and
   `min`/`max` on `field:limit::pts scope:roster` for the points band. `Skirmish`
-  (501–1000 pts, 9 Groups) is built and builder-verified; the other three are
-  clones-to-come. The `Group` child force has `max 25% limit::pts` (**works**) and
+  (501–1000 / 9), `Clash` (1001–2000 / 12) and `Battle` (2001–3000 / 16) are
+  built (constraint ids namespaced `dzc-<slug>-*`); `Reconquest` (3001+ / 20 +4
+  per 1000 over 3000) is the remaining one. The `Group` child force has `max 25% limit::pts` (**works**) and
   per-slot `max category` constraints raised +1 per point of Standard `category`
   (V/H/S ≤ Standard — in place, **not yet roster-tested**). The `Generated`
   categoryLink on the `Group` force is `hidden` (Drones/Hulks aren't list-buyable).
