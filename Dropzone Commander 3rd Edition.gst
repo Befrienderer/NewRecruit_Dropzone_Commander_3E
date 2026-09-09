@@ -58,6 +58,94 @@
         </modifier>
       </modifiers>
     </forceEntry>
+    <forceEntry name="Clash" id="f05d-b606-12c4-88bd" childForcesLabel="Groups" hidden="false" page="9" publicationId="170a-7ed5-c49d-82ec">
+      <constraints>
+        <constraint id="baf7-13fd-0773-650d" field="forces" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="0"/>
+        <constraint id="1e8e-3d2b-2c4c-c6b0" field="forces" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="dzc-clash-alloc-vanguard" childId="74de-7c05-a61e-25e8" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
+        <constraint id="dzc-clash-alloc-heavy" childId="9ed0-b443-0fe4-1eaa" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
+        <constraint id="dzc-clash-alloc-support" childId="d6a2-4ad7-4694-03ce" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
+        <constraint id="dzc-clash-groups-max" field="forces" includeChildForces="false" includeChildSelections="false" scope="self" shared="false" type="max" value="12"/>
+        <constraint id="dzc-clash-pts-min" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="1001"/>
+        <constraint id="dzc-clash-pts-max" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="2000"/>
+      </constraints>
+      <forceEntries>
+        <forceEntry name="Group" id="8ce1-1a18-11bf-8615" hidden="false">
+          <categoryLinks>
+            <categoryLink name="Standard" id="724e-701b-3418-09d4" hidden="false" targetId="c926-5116-6500-dd46"/>
+            <categoryLink name="Support" id="d452-ee38-2f04-9d21" hidden="false" targetId="d6a2-4ad7-4694-03ce"/>
+            <categoryLink name="Heavy" id="cf1f-d369-1999-cb8a" hidden="false" targetId="9ed0-b443-0fe4-1eaa"/>
+            <categoryLink name="Transport" id="26b1-d12a-3d42-c074" hidden="false" targetId="0f65-b14b-ed9f-3e06"/>
+            <categoryLink name="Vanguard" id="9bd1-471e-1d4d-7f82" hidden="false" targetId="74de-7c05-a61e-25e8"/>
+            <categoryLink name="Generated" id="831d-15f6-d723-146d" hidden="true" targetId="9ca1-02c4-a934-51fe"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="2746-021a-658f-cc1e" field="limit::cdb2-e720-ea26-2255" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="self" shared="false" type="max" value="25"/>
+          </constraints>
+        </forceEntry>
+      </forceEntries>
+      <modifiers>
+        <modifier field="dzc-clash-alloc-vanguard" type="increment" value="1">
+          <repeats>
+            <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
+          </repeats>
+        </modifier>
+        <modifier field="dzc-clash-alloc-heavy" type="increment" value="1">
+          <repeats>
+            <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
+          </repeats>
+        </modifier>
+        <modifier field="dzc-clash-alloc-support" type="increment" value="1">
+          <repeats>
+            <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </forceEntry>
+    <forceEntry name="Battle" id="6d49-920a-0020-1440" childForcesLabel="Groups" hidden="false" page="9" publicationId="170a-7ed5-c49d-82ec">
+      <constraints>
+        <constraint id="980b-7f3c-3b9b-f433" field="forces" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="0"/>
+        <constraint id="19a5-ff7c-6f24-d6a3" field="forces" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="dzc-battle-alloc-vanguard" childId="74de-7c05-a61e-25e8" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
+        <constraint id="dzc-battle-alloc-heavy" childId="9ed0-b443-0fe4-1eaa" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
+        <constraint id="dzc-battle-alloc-support" childId="d6a2-4ad7-4694-03ce" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
+        <constraint id="dzc-battle-groups-max" field="forces" includeChildForces="false" includeChildSelections="false" scope="self" shared="false" type="max" value="16"/>
+        <constraint id="dzc-battle-pts-min" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="2001"/>
+        <constraint id="dzc-battle-pts-max" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="3000"/>
+      </constraints>
+      <forceEntries>
+        <forceEntry name="Group" id="cc3f-a64b-2b11-03bd" hidden="false">
+          <categoryLinks>
+            <categoryLink name="Standard" id="264f-6da4-084b-dc86" hidden="false" targetId="c926-5116-6500-dd46"/>
+            <categoryLink name="Support" id="2e8a-06df-b34d-afd1" hidden="false" targetId="d6a2-4ad7-4694-03ce"/>
+            <categoryLink name="Heavy" id="74df-37ec-fafd-0777" hidden="false" targetId="9ed0-b443-0fe4-1eaa"/>
+            <categoryLink name="Transport" id="2305-b3f0-cf13-2e84" hidden="false" targetId="0f65-b14b-ed9f-3e06"/>
+            <categoryLink name="Vanguard" id="985a-d3ba-6053-bc20" hidden="false" targetId="74de-7c05-a61e-25e8"/>
+            <categoryLink name="Generated" id="6407-433a-2aa4-005d" hidden="true" targetId="9ca1-02c4-a934-51fe"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="0b56-27e0-b464-0788" field="limit::cdb2-e720-ea26-2255" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="self" shared="false" type="max" value="25"/>
+          </constraints>
+        </forceEntry>
+      </forceEntries>
+      <modifiers>
+        <modifier field="dzc-battle-alloc-vanguard" type="increment" value="1">
+          <repeats>
+            <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
+          </repeats>
+        </modifier>
+        <modifier field="dzc-battle-alloc-heavy" type="increment" value="1">
+          <repeats>
+            <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
+          </repeats>
+        </modifier>
+        <modifier field="dzc-battle-alloc-support" type="increment" value="1">
+          <repeats>
+            <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </forceEntry>
   </forceEntries>
   <profileTypes>
     <profileType name="Vehicle" id="f612-c788-3c14-202c" hidden="false" kind="model">
