@@ -14,13 +14,16 @@
     <costType name="category" id="e154-4f91-e9d9-012e" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
   <forceEntries>
-    <forceEntry name="Configuration" id="c15e-98a2-f3dd-1cb4" childForcesLabel="Battlegroups" hidden="false" page="9" publicationId="170a-7ed5-c49d-82ec">
+    <forceEntry name="Skirmish" id="c15e-98a2-f3dd-1cb4" childForcesLabel="Groups" hidden="false" page="9" publicationId="170a-7ed5-c49d-82ec">
       <constraints>
-        <constraint id="9ca0-6032-9c53-cca7-min" field="forces" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="1"/>
+        <constraint id="9ca0-6032-9c53-cca7-min" field="forces" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="0"/>
         <constraint id="9ca0-6032-9c53-cca7-max" field="forces" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="1"/>
         <constraint id="dzc-alloc-vanguard" childId="74de-7c05-a61e-25e8" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
         <constraint id="dzc-alloc-heavy" childId="9ed0-b443-0fe4-1eaa" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
         <constraint id="dzc-alloc-support" childId="d6a2-4ad7-4694-03ce" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
+        <constraint id="dzc-skirmish-groups-max" field="forces" includeChildForces="false" includeChildSelections="false" scope="self" shared="false" type="max" value="9"/>
+        <constraint id="dzc-skirmish-pts-min" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="501"/>
+        <constraint id="dzc-skirmish-pts-max" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="1000"/>
       </constraints>
       <forceEntries>
         <forceEntry name="Group" id="5a24-6c02-1bfc-6fd8" hidden="false">
@@ -30,7 +33,7 @@
             <categoryLink name="Heavy" id="9033-d7b5-fa7b-939f" hidden="false" targetId="9ed0-b443-0fe4-1eaa"/>
             <categoryLink name="Transport" id="8872-6517-0ed8-8d69" hidden="false" targetId="0f65-b14b-ed9f-3e06"/>
             <categoryLink name="Vanguard" id="1c9f-361b-836d-1171" hidden="false" targetId="74de-7c05-a61e-25e8"/>
-            <categoryLink name="Generated" id="c428-d02c-0f8c-3cfd" hidden="false" targetId="9ca1-02c4-a934-51fe"/>
+            <categoryLink name="Generated" id="c428-d02c-0f8c-3cfd" hidden="true" targetId="9ca1-02c4-a934-51fe"/>
           </categoryLinks>
           <constraints>
             <constraint id="a45f-7c60-f9ad-9f9a" field="limit::cdb2-e720-ea26-2255" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="self" shared="false" type="max" value="25"/>

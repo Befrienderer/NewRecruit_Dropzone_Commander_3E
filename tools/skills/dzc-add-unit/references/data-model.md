@@ -54,6 +54,16 @@
     that holds the model entries — it only fires once the user picks the unit.
     Applied to every Bioficer unit; the `dzc-add-unit` build does this by default.
 
+11. **Slot categories are game-system ids — never make a faction-local `categoryEntry`
+    for them.** Standard/Vanguard/Support/Heavy/Transport/Generated/Raw Materials all
+    live in the `.gst` (ids in the table above). If a `.cat` has its own
+    `categoryEntry name="Generated"` with a different id, a unit linked to *that*
+    silently fails to surface in the builder — the `Group` force's categoryLink
+    targets the `.gst` id, so there is no slot for the local one, and `nr_diagnosis`
+    stays clean. Fix: repoint every `categoryLink` to the `.gst` id and delete the
+    local `categoryEntry`. (This is why Drones didn't show under Generated but Hulks
+    did — fixed 2026-09-08.) Bioficer now has zero local `categoryEntries`.
+
 ## Project ids (spot-check with the fetch helper below if the .gst was rebuilt)
 
 Game system: **Dropzone Commander 3rd Edition**, `sys-1822-fb7b-9057-840f`
@@ -203,13 +213,16 @@ for a new unit; the **structure** is what to match.
 - **`pts` + `category` cost.** `pts` = real cost (roster total, per-Group 25% cap).
   `category` = same value, used only for the slot allocation, so RM tokens (no
   `category` cost) don't count against a slot. Slot itself = the unit's category.
-- **List legality** (a build separate from this skill, in progress on the game
-  system's `Configuration` force): `max 25% limit::pts` on the `Group` child force
-  **works**; per-slot `max category` constraints on `Configuration` raised +1 per
-  point of Standard `category` are in place but **not yet roster-tested**. Game
-  size / Group-cap is **not built** — the first attempt soft-locked the builder and
-  was reverted; it needs a mechanism that surfaces options into a catalogue-less
-  top force, built one constraint at a time.
+- **List legality** (a build separate from this skill, on the game system's
+  force entries): game sizes are **four sibling top-level `forceEntries`** —
+  Skirmish / Clash / Battle / Reconquest — the player picks one. Each: `max 1`
+  `field:forces scope:roster`; a `max N` `field:forces scope:self` Group cap; and
+  `min`/`max` on `field:limit::pts scope:roster` for the points band. `Skirmish`
+  (501–1000 pts, 9 Groups) is built and builder-verified; the other three are
+  clones-to-come. The `Group` child force has `max 25% limit::pts` (**works**) and
+  per-slot `max category` constraints raised +1 per point of Standard `category`
+  (V/H/S ≤ Standard — in place, **not yet roster-tested**). The `Generated`
+  categoryLink on the `Group` force is `hidden` (Drones/Hulks aren't list-buyable).
 - **RM tokens (Bioficer).** A shared `Raw Material` upgrade (5 pts, category
   `Raw Materials`) linked onto each RM-capable model, with the per-unit cap
   (`max 12` for the Ark) on the link. `Raw Materials` is its own category so its

@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue name="Bioficer" id="341c-a9a0-8949-4c61" battleScribeVersion="2.03" gameSystemId="sys-1822-fb7b-9057-840f" gameSystemRevision="1" library="false" revision="2" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <categoryEntries>
-    <categoryEntry name="Generated" id="de22-82b2-a95d-a9b0" hidden="false"/>
-  </categoryEntries>
   <entryLinks>
-    <entryLink name="Drones" id="18b4-b80a-eecc-e70f" hidden="false" import="true" targetId="ccbb-8f16-10ca-ae23" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink name="Generated" id="bcc4-15bb-5528-fb50" primary="true" targetId="de22-82b2-a95d-a9b0"/>
-      </categoryLinks>
-    </entryLink>
+    <entryLink name="Drones" id="18b4-b80a-eecc-e70f" hidden="false" import="true" targetId="ccbb-8f16-10ca-ae23" type="selectionEntry"/>
     <entryLink name="Grievance Genitor Ark" id="7d9c-b0d2-af3c-0af5" hidden="false" import="true" targetId="02e6-3319-e3d7-68c4" type="selectionEntry"/>
     <entryLink name="Thorn Light Skimmer" id="d221-b4e7-ff51-40c8" hidden="false" import="true" targetId="ab8c-a2c7-720a-93a6" type="selectionEntry"/>
     <entryLink name="Surge Gunship" id="7114-318a-f8ea-5f89" hidden="false" import="true" targetId="f757-1ebf-b413-ce59" type="selectionEntry"/>
@@ -442,11 +435,8 @@
   <sharedSelectionEntries>
     <selectionEntry name="Drones" id="ccbb-8f16-10ca-ae23" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Generated" id="ab59-59a8-cf62-cfcb" primary="true" targetId="de22-82b2-a95d-a9b0"/>
+        <categoryLink name="Generated" id="ab59-59a8-cf62-cfcb" primary="true" targetId="9ca1-02c4-a934-51fe"/>
       </categoryLinks>
-      <costs>
-        <cost name="points" typeId="ab87-75c9-cd43-9593" value="0"/>
-      </costs>
       <infoLinks>
         <infoLink name="Drone" id="b880-36dd-54a8-7a1a" hidden="false" targetId="2f46-1b95-5a8a-eff1" type="profile"/>
         <infoLink name="Puppet" id="c886-7967-09d0-9697" hidden="false" targetId="ec5c-fce7-3c81-79e3" type="rule"/>
@@ -459,16 +449,9 @@
           </constraints>
           <selectionEntries>
             <selectionEntry name="Drones" id="349d-e961-cc7b-d7e8" hidden="false" import="true" type="model">
-              <categoryLinks>
-                <categoryLink name="Generated" id="8e7a-2f79-8206-d3ff" hidden="false" primary="true" targetId="de22-82b2-a95d-a9b0"/>
-              </categoryLinks>
               <costs>
-                <cost name="points" typeId="ab87-75c9-cd43-9593" value="0"/>
-                <cost name="Standard" typeId="6086-6c29-a320-0fcc" value="0"/>
-                <cost name="Support" typeId="df03-77d8-4c11-2243" value="0"/>
-                <cost name="Heavy" typeId="72f6-b4d6-1f34-219e" value="0"/>
-                <cost name="Transport" typeId="4306-5775-b4a6-007d" value="0"/>
                 <cost name="pts" typeId="cdb2-e720-ea26-2255" value="0"/>
+                <cost name="category" typeId="e154-4f91-e9d9-012e" value="0"/>
               </costs>
               <infoLinks>
                 <infoLink name="Decon Rifles" id="16f8-f9b4-319d-d7f3" hidden="false" targetId="112d-3627-e6de-45d3" type="profile">
@@ -1079,6 +1062,11 @@
               </costs>
               <entryLinks>
                 <entryLink name="Decon Zap" id="513a-3ab2-9747-af0e" hidden="false" import="true" targetId="f80b-710a-f644-57e3" type="selectionEntry"/>
+                <entryLink name="Raw Material" id="d1c7-5195-992f-e5ec" hidden="false" import="true" targetId="e218-761a-0442-82d3" type="selectionEntry">
+                  <constraints>
+                    <constraint id="1dba-8386-f3b0-befe" field="selections" scope="parent" shared="false" type="max" value="8"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
