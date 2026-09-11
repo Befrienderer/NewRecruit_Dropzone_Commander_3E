@@ -11,7 +11,7 @@
   </categoryEntries>
   <costTypes>
     <costType name="pts" id="cdb2-e720-ea26-2255" defaultCostLimit="-1"/>
-    <costType name="category" id="e154-4f91-e9d9-012e" defaultCostLimit="-1" hidden="false"/>
+    <costType name="category" id="e154-4f91-e9d9-012e" defaultCostLimit="-1" hidden="true"/>
   </costTypes>
   <forceEntries>
     <forceEntry name="Skirmish" id="c15e-98a2-f3dd-1cb4" childForcesLabel="Groups" hidden="false" page="9" publicationId="170a-7ed5-c49d-82ec">
@@ -22,8 +22,8 @@
         <constraint id="dzc-alloc-heavy" childId="9ed0-b443-0fe4-1eaa" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
         <constraint id="dzc-alloc-support" childId="d6a2-4ad7-4694-03ce" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
         <constraint id="dzc-skirmish-groups-max" field="forces" includeChildForces="false" includeChildSelections="false" scope="self" shared="false" type="max" value="9"/>
-        <constraint id="dzc-skirmish-pts-min" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="501"/>
-        <constraint id="dzc-skirmish-pts-max" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="1000"/>
+        <constraint id="dzc-skirmish-pts-min" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="-1"/>
+        <constraint id="dzc-skirmish-pts-max" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="-1"/>
       </constraints>
       <forceEntries>
         <forceEntry name="Group" id="5a24-6c02-1bfc-6fd8" hidden="false">
@@ -56,6 +56,16 @@
             <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
           </repeats>
         </modifier>
+        <modifier field="dzc-skirmish-pts-min" type="set" value="501">
+          <conditions>
+            <condition childId="c15e-98a2-f3dd-1cb4" field="forces" includeChildForces="true" includeChildSelections="false" scope="roster" shared="false" type="greaterThan" value="0"/>
+          </conditions>
+        </modifier>
+        <modifier field="dzc-skirmish-pts-max" type="set" value="1000">
+          <conditions>
+            <condition childId="c15e-98a2-f3dd-1cb4" field="forces" includeChildForces="true" includeChildSelections="false" scope="roster" shared="false" type="greaterThan" value="0"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </forceEntry>
     <forceEntry name="Clash" id="f05d-b606-12c4-88bd" childForcesLabel="Groups" hidden="false" page="9" publicationId="170a-7ed5-c49d-82ec">
@@ -66,8 +76,8 @@
         <constraint id="dzc-clash-alloc-heavy" childId="9ed0-b443-0fe4-1eaa" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
         <constraint id="dzc-clash-alloc-support" childId="d6a2-4ad7-4694-03ce" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
         <constraint id="dzc-clash-groups-max" field="forces" includeChildForces="false" includeChildSelections="false" scope="self" shared="false" type="max" value="12"/>
-        <constraint id="dzc-clash-pts-min" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="1001"/>
-        <constraint id="dzc-clash-pts-max" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="2000"/>
+        <constraint id="dzc-clash-pts-min" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="-1"/>
+        <constraint id="dzc-clash-pts-max" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="-1"/>
       </constraints>
       <forceEntries>
         <forceEntry name="Group" id="8ce1-1a18-11bf-8615" hidden="false">
@@ -100,6 +110,16 @@
             <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
           </repeats>
         </modifier>
+        <modifier field="dzc-clash-pts-min" type="set" value="1001">
+          <conditions>
+            <condition childId="f05d-b606-12c4-88bd" field="forces" includeChildForces="true" includeChildSelections="false" scope="roster" shared="false" type="greaterThan" value="0"/>
+          </conditions>
+        </modifier>
+        <modifier field="dzc-clash-pts-max" type="set" value="2000">
+          <conditions>
+            <condition childId="f05d-b606-12c4-88bd" field="forces" includeChildForces="true" includeChildSelections="false" scope="roster" shared="false" type="greaterThan" value="0"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </forceEntry>
     <forceEntry name="Battle" id="6d49-920a-0020-1440" childForcesLabel="Groups" hidden="false" page="9" publicationId="170a-7ed5-c49d-82ec">
@@ -110,8 +130,8 @@
         <constraint id="dzc-battle-alloc-heavy" childId="9ed0-b443-0fe4-1eaa" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
         <constraint id="dzc-battle-alloc-support" childId="d6a2-4ad7-4694-03ce" field="e154-4f91-e9d9-012e" includeChildForces="true" includeChildSelections="true" scope="self" shared="false" type="max" value="0"/>
         <constraint id="dzc-battle-groups-max" field="forces" includeChildForces="false" includeChildSelections="false" scope="self" shared="false" type="max" value="16"/>
-        <constraint id="dzc-battle-pts-min" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="2001"/>
-        <constraint id="dzc-battle-pts-max" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="3000"/>
+        <constraint id="dzc-battle-pts-min" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="min" value="-1"/>
+        <constraint id="dzc-battle-pts-max" field="limit::cdb2-e720-ea26-2255" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="-1"/>
       </constraints>
       <forceEntries>
         <forceEntry name="Group" id="cc3f-a64b-2b11-03bd" hidden="false">
@@ -143,6 +163,16 @@
           <repeats>
             <repeat childId="c926-5116-6500-dd46" field="e154-4f91-e9d9-012e" includeChildForces="true" repeats="1" roundUp="false" scope="self" shared="false" value="1"/>
           </repeats>
+        </modifier>
+        <modifier field="dzc-battle-pts-min" type="set" value="2001">
+          <conditions>
+            <condition childId="6d49-920a-0020-1440" field="forces" includeChildForces="true" includeChildSelections="false" scope="roster" shared="false" type="greaterThan" value="0"/>
+          </conditions>
+        </modifier>
+        <modifier field="dzc-battle-pts-max" type="set" value="3000">
+          <conditions>
+            <condition childId="6d49-920a-0020-1440" field="forces" includeChildForces="true" includeChildSelections="false" scope="roster" shared="false" type="greaterThan" value="0"/>
+          </conditions>
         </modifier>
       </modifiers>
     </forceEntry>
