@@ -79,6 +79,55 @@
     (2026-09-10); reuse for Reconquest and any future "constraint that must only
     apply once an optional force/entry is present."
 
+13. **`add({typeName:"Weapons", ...}, 'sharedProfiles', cat)` can silently produce
+    a blank `Vehicle` profile instead — even though pitfall #8 says typeName alone
+    is fine for the four built-ins.** Hit this mid-UCM-faction-import: every one of
+    97 weapon profiles came back `typeName:"Vehicle"` with empty characteristics
+    (only `Special` survived, since it's a name both types share) — a live-editor
+    state issue, not a data bug, that started partway through a long session.
+    **Defensive fix: always pass explicit `typeId` + per-characteristic `typeId`s
+    for Weapons profiles too**, the same way Transport/RM Storage already must
+    (ids in the table below). After any large weapon-profile batch, spot-check
+    one with `nr_read raw:true` and confirm `typeName` and the characteristic
+    names are what you asked for — this bug gives back a *plausible-looking*
+    object (a real profile row, real id) that only looks wrong once you check
+    its shape, so `nr_diagnosis` and the eval return value both stay clean.
+
+14. **A paid weapon upgrade that must scale with the model's own count**
+    ("all Units of the same Variant must be upgraded equally" — UCM p.9) is
+    the "points that scale per model" recipe from `guide/recipes/`
+    `points-per-model`, NOT the flat-price optional-upgrade shape you'd guess:
+    base `pts`/`category` cost **0**, a `min 0 / max 1` toggle constraint
+    (`field:"selections" scope:"parent"`, not automatic), plus an `increment`
+    modifier on the cost-type id itself with a repeat
+    `{childId:"model", field:"selections", scope:"parent", value:1, repeats:1}`
+    — "1 per model in parent." The toggle is one yes/no choice per model
+    *selection* (not per copy); the repeat is what makes 2 Interceptors with
+    the upgrade cost 20 instead of 10. Needs a roster test (add 2 of a model,
+    toggle the upgrade, confirm the total) — not yet builder-verified.
+
+15. **A per-entry roster-wide cap gated on which game-size force is present**
+    (e.g. Rare: "one per Skirmish, two per Clash, three per Battle/Reconquest")
+    reuses pitfall #12's gating shape, but on the *unit or model entry itself*
+    rather than a game-size forceEntry: `max` constraint, base `value:-1`,
+    `field:"selections" scope:"roster" shared:true`, id `dzc-rare-max`; three
+    `type:"set"` modifiers (value 1/2/3) each gated on
+    `{type:"greaterThan", value:0, field:"forces", childId:"<that game-size
+    forceEntry's id>", scope:"roster"}`. Put it on the **unit** entry when the
+    whole unit/all its loadouts are Rare, on the specific **model** entry when
+    only one loadout is (Bioficer's Silence 4). Add a 4th modifier (value 3)
+    once Reconquest exists.
+
+16. **`add()` regenerating a requested id is more common on a node that already
+    has sibling content than on a fresh one.** Adding a constraint with an
+    explicit `id:"dzc-rare-max"` kept that literal id when added to 9 fresh UCM
+    unit entries, but got silently regenerated on Bioficer's Silence 4 model
+    (which already had a `comment` and other fields). If a later `add()` needs
+    to reference an id you just requested (e.g. a modifier's `field`), re-read
+    the just-created node's *actual* id rather than assuming your requested
+    string stuck — cheap insurance: `edit()` the modifiers' `field` to the
+    real id if it doesn't match.
+
 ## Project ids (spot-check with the fetch helper below if the .gst was rebuilt)
 
 Game system: **Dropzone Commander 3rd Edition**, `sys-1822-fb7b-9057-840f`
