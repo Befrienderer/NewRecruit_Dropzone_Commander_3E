@@ -1024,6 +1024,9 @@
             </selectionEntry>
             <selectionEntry name="Silence 4" id="12e0-ea1e-2cd5-55b9" hidden="false" import="true" type="model">
               <comment>Rare</comment>
+              <constraints>
+                <constraint id="2201-f27f-2ad3-6fce" field="selections" includeChildForces="false" includeChildSelections="false" scope="roster" shared="true" type="max" value="-1"/>
+              </constraints>
               <costs>
                 <cost name="pts" typeId="cdb2-e720-ea26-2255" value="90"/>
                 <cost name="category" typeId="e154-4f91-e9d9-012e" value="90"/>
@@ -1033,6 +1036,23 @@
                 <entryLink name="Ghost Orbit Pair, wide" id="eca2-9390-1c67-78d2" hidden="false" import="true" targetId="96e5-79c3-5699-f982" type="selectionEntry"/>
                 <entryLink name="Ghost Orbit Pair, narrow" id="8c4d-3fc8-d1a8-6786" hidden="false" import="true" targetId="c62b-267f-b9a6-7f0d" type="selectionEntry"/>
               </entryLinks>
+              <modifiers>
+                <modifier field="2201-f27f-2ad3-6fce" type="set" value="1">
+                  <conditions>
+                    <condition childId="c15e-98a2-f3dd-1cb4" field="forces" includeChildForces="true" scope="roster" shared="false" type="greaterThan" value="0"/>
+                  </conditions>
+                </modifier>
+                <modifier field="2201-f27f-2ad3-6fce" type="set" value="2">
+                  <conditions>
+                    <condition childId="f05d-b606-12c4-88bd" field="forces" includeChildForces="true" scope="roster" shared="false" type="greaterThan" value="0"/>
+                  </conditions>
+                </modifier>
+                <modifier field="2201-f27f-2ad3-6fce" type="set" value="3">
+                  <conditions>
+                    <condition childId="6d49-920a-0020-1440" field="forces" includeChildForces="true" scope="roster" shared="false" type="greaterThan" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
