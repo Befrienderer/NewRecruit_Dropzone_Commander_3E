@@ -151,6 +151,12 @@ weapon appears. A bare `profile` node cannot hold rule links — that's why the 
   - A **Generated** unit (Drones, Hulks) can't be bought in a list — it exists only
     for in-game spawning; its `Models` group still gets the card's squad range, but
     the real build-time block belongs to the list-rules layer, not here.
+  - **If the unit has only one loadout** (one model entry in the group), add
+    `automatic:true` to the `min` constraint. The builder then auto-selects that
+    one model up to the squad minimum as soon as the unit is added, instead of
+    leaving it empty for the player to `+` manually. **Skip this for a unit with
+    more than one loadout** — the builder would have no way to pick which model(s)
+    to auto-select, so leave those groups manual.
 
 ### 3e. Models — one `type: "model"` entry per loadout, inside the `Models` group
 

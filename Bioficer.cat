@@ -444,7 +444,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Models" id="97aa-86b8-374c-7b83" hidden="false">
           <constraints>
-            <constraint id="5e11-572a-8eaa-6b75" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+            <constraint id="5e11-572a-8eaa-6b75" automatic="true" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
             <constraint id="fc8b-3cc1-18af-7b24" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="3"/>
           </constraints>
           <selectionEntries>
@@ -1051,7 +1051,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Models" id="093a-90f0-420d-40b8" hidden="false">
           <constraints>
-            <constraint id="a394-b21a-3f76-286e" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+            <constraint id="a394-b21a-3f76-286e" automatic="true" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
             <constraint id="2ab4-be12-1a4f-b1d1" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
           </constraints>
           <selectionEntries>
@@ -1084,7 +1084,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Models" id="0cd6-bcfd-2b86-2bfc" hidden="false">
           <constraints>
-            <constraint id="72d5-749f-ef51-e5fb" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+            <constraint id="72d5-749f-ef51-e5fb" automatic="true" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
             <constraint id="7d65-5b44-f755-3606" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="1"/>
           </constraints>
           <selectionEntries>
@@ -1112,7 +1112,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Models" id="3caf-fa0e-8027-2385" hidden="false">
           <constraints>
-            <constraint id="b06a-d7fd-8e0b-4017" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+            <constraint id="b06a-d7fd-8e0b-4017" automatic="true" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
             <constraint id="accc-d7d9-92ba-4762" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="1"/>
           </constraints>
           <selectionEntries>
@@ -1139,7 +1139,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Models" id="454c-5438-e057-aa6c" hidden="false">
           <constraints>
-            <constraint id="68a0-99c3-8595-3b06" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
+            <constraint id="68a0-99c3-8595-3b06" automatic="true" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="1"/>
             <constraint id="2358-42ec-8ed1-159a" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="1"/>
           </constraints>
           <selectionEntries>
@@ -1169,7 +1169,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Models" id="97f2-67e3-a2ab-373b" hidden="false">
           <constraints>
-            <constraint id="1d5d-f8ae-c53c-b157" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
+            <constraint id="1d5d-f8ae-c53c-b157" automatic="true" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="min" value="2"/>
             <constraint id="61ce-857c-f9f6-9737" childId="model" field="selections" includeChildSelections="true" scope="self" shared="false" type="max" value="2"/>
           </constraints>
           <selectionEntries>
