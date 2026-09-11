@@ -64,6 +64,21 @@
     local `categoryEntry`. (This is why Drones didn't show under Generated but Hulks
     did — fixed 2026-09-08.) Bioficer now has zero local `categoryEntries`.
 
+12. **A `min`/`max` on `limit::<costTypeId>` needs `shared:true scope:roster` to
+    read the roster's points limit at all — but that makes it fire roster-wide
+    even when the force that owns it isn't in the roster.** (`shared:false` is not
+    the fix: it makes the query resolve at the force's own scope instead, where
+    `limit::` reads 0, breaking the check even when the force IS present. Only a
+    `percentValue` constraint reliably reads the roster's limit regardless of
+    scope/shared.) Gate it instead: keep `shared:true`, set the constraint's base
+    `value` to `-1` (no limit), and add a `type:"set"` modifier (`field:` the
+    constraint's own id) with a condition `{type:"greaterThan", value:0,
+    field:"forces", childId:"<this forceEntry's own id>", scope:"roster",
+    includeChildForces:true}` — raises it to the real band only once this force
+    is actually present. Used for the Skirmish/Clash/Battle points bands
+    (2026-09-10); reuse for Reconquest and any future "constraint that must only
+    apply once an optional force/entry is present."
+
 ## Project ids (spot-check with the fetch helper below if the .gst was rebuilt)
 
 Game system: **Dropzone Commander 3rd Edition**, `sys-1822-fb7b-9057-840f`
@@ -220,7 +235,9 @@ for a new unit; the **structure** is what to match.
   `min`/`max` on `field:limit::pts scope:roster` for the points band. `Skirmish`
   (501–1000 / 9), `Clash` (1001–2000 / 12) and `Battle` (2001–3000 / 16) are
   built (constraint ids namespaced `dzc-<slug>-*`); `Reconquest` (3001+ / 20 +4
-  per 1000 over 3000) is the remaining one. The `Group` child force has `max 25% limit::pts` (**works**) and
+  per 1000 over 3000) is the remaining one. **Points-band constraints must be
+  gated on the force's own presence** (see pitfall #12) or a game size with no
+  force in the roster still throws its band error. The `Group` child force has `max 25% limit::pts` (**works**) and
   per-slot `max category` constraints raised +1 per point of Standard `category`
   (V/H/S ≤ Standard — in place, **not yet roster-tested**). The `Generated`
   categoryLink on the `Group` force is `hidden` (Drones/Hulks aren't list-buyable).
